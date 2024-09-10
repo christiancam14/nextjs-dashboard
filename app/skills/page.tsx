@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Skills",
 };
 
-export const SkillsPage = () => {
+export default function SkillsPage() {
   return (
     <section className="w-screen pt-20 md:pt-32">
       <div className="flex flex-col max-w-screen-xl mx-auto px-6 md:px-12">
@@ -25,6 +25,4 @@ export const SkillsPage = () => {
       </div>
     </section>
   );
-};
-
-export default SkillsPage;
+}

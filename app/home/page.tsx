@@ -4,7 +4,7 @@ import { MdContacts } from "react-icons/md";
 
 import { FaRegFilePdf } from "react-icons/fa";
 
-export const HomePage = () => {
+export default function HomePage() {
   return (
     <section className="w-screen pt-20 md:pt-32">
       <div className="flex flex-col max-w-screen-xl mx-auto px-6 md:px-12">
@@ -50,6 +50,4 @@ export const HomePage = () => {
       </div>
     </section>
   );
-};
-
-export default HomePage;
+}
