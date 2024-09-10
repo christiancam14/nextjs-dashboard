@@ -123,7 +123,6 @@ export default function EditInvoiceForm({
         >
           Cancel
         </Link>
-        <Button type="submit">Edit Invoice</Button>
       </div>
     </form>
   );
