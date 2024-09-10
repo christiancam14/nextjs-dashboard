@@ -3,6 +3,7 @@ import { CalendarIcon } from "@heroicons/react/24/outline";
 // import { lusitana } from "@/app/ui/fonts";
 import { lusitana } from "../fonts";
 import { fetchRevenue } from "@/app/lib/data";
+import { Button } from "@nextui-org/react";
 
 // This component is representational only.
 // For data visualization UI, check out:
@@ -26,6 +27,13 @@ export default async function RevenueChart() {
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         Recent Revenue
       </h2>
+      <Button>Click me</Button>
+      <Button
+        radius="full"
+        className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+      >
+        Button
+      </Button>
       {/* NOTE: Uncomment this code in Chapter 7 */}
 
       <div className="rounded-xl bg-gray-50 p-4">
