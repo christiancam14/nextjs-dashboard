@@ -4,8 +4,8 @@ export const metadata: Metadata = {
   title: "Projects",
 };
 
-export const page = () => {
+export const ProjectsPage = () => {
   return <div>Projects page</div>;
 };
 
-export default page;
+export default ProjectsPage;

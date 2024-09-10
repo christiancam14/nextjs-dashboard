@@ -1,7 +1,6 @@
 import { generateYAxis } from "@/app/lib/utils";
 import { CalendarIcon } from "@heroicons/react/24/outline";
-// import { lusitana } from "@/app/ui/fonts";
-import { lusitana } from "../fonts";
+import { andika } from "../fonts";
 import { fetchRevenue } from "@/app/lib/data";
 import { Button } from "@nextui-org/react";
 
@@ -24,7 +23,7 @@ export default async function RevenueChart() {
 
   return (
     <div className="w-full md:col-span-4">
-      <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
+      <h2 className={`${andika.className} mb-4 text-xl md:text-2xl`}>
         Recent Revenue
       </h2>
       <Button>Click me</Button>

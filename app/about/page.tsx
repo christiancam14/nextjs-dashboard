@@ -5,8 +5,8 @@ export const metadata: Metadata = {
 };
 
 
-export const page = () => {
+export const AboutPage = () => {
   return <div>About page</div>;
 };
 
-export default page;
+export default AboutPage;
