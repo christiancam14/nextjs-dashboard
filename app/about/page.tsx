@@ -4,9 +4,11 @@ export const metadata: Metadata = {
   title: "About",
 };
 
-
-export const AboutPage = () => {
-  return <div>About page</div>;
-};
-
-export default AboutPage;
+export default function AboutPage() {
+  return (
+    <div>
+      <h1>About Us</h1>
+      <p>This is the about page</p>
+    </div>
+  );
+}
