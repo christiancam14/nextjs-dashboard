@@ -1,36 +1,54 @@
-import { andika } from "../ui/fonts";
-import styles from "@/app/ui/home.module.css";
 import Image from "next/image";
+import { Button } from "@nextui-org/react";
+import { MdContacts } from "react-icons/md";
+
+import { FaRegFilePdf } from "react-icons/fa";
 
 export const HomePage = () => {
   return (
-    <>
-      <div
-        id="Home"
-        className="grid grid-flow-col h-20 shrink-0 items-end rounded-lg bg-gray-950/[.6] p-4 md:h-52"
-      >
-        <div className="col-6 text-right">
-          <h2 className="text-3xl">Christian Camacho Galvis</h2>
-          <span className="text-2xl">Frontend developer</span>
-        </div>
-        <div className="col">
-          <Image src="/../../ui/assets/avatar.png" alt="Profile pick" width={50} height={50} />
+    <section className="w-screen pt-20 md:pt-32">
+      <div className="flex flex-col max-w-screen-xl mx-auto px-6 md:px-12">
+        <div className="flex flex-col-reverse shrink-0 items-end rounded-lg pt-6 pb-8 md:p-4  col md:row">
+          <div className="flex flex-col col-6 text-center md:text-right self-center gap-2">
+            <h2 className="text-4xl font-extrabold	">
+              Christian Camacho Galvis
+            </h2>
+            <p className="text-2xl  font-bold">Frontend developer</p>
+            <p className="text-medium max-w-96 mx-auto md:ml-auto">
+              I am a web developer with over 2 years of experience in frontend
+              development
+            </p>
+            <div className="flex mt-4 md:mt-0">
+              <a
+                href="/pdf/EN_ChristianCamachoGalvis_CV.pdf"
+                className="w-fit mx-auto"
+                download={true}
+              >
+                <Button className="rounded-md bg-slate-600 hover:bg-slate-800 mt-0 md:mt-2 text-white">
+                  <FaRegFilePdf />
+                  CV
+                </Button>
+              </a>
+              <a href="#ContactPage" className="w-fit mx-auto">
+                <Button className="rounded-md bg-slate-600 hover:bg-slate-800 mt-0 md:mt-2 text-white">
+                  <MdContacts />
+                  Contact
+                </Button>
+              </a>
+            </div>
+          </div>
+          <div className="col mx-auto self-center mb-4 md:mb-0">
+            <Image
+              src="/avatar.png"
+              alt="Profile pick"
+              width={150}
+              height={150}
+              className="rounded-full"
+            />
+          </div>
         </div>
       </div>
-      <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-        <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          <p
-            className={`${andika.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
-          >
-            <strong>Welcome to Acme.</strong> This is the example for the ,
-            brought to you by Vercel.
-          </p>
-
-          <div className={styles.shape} />
-        </div>
-        <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12"></div>
-      </div>
-    </>
+    </section>
   );
 };
 

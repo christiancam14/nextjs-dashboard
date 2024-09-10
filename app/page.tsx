@@ -6,20 +6,20 @@ import HomePage from "./home/page";
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col p-6">
-      <div id="Home" style={{ height: "80vh" }}>
+    <main className="flex min-h-screen flex-col scrollbar-none">
+      <div id="Home" style={{ minHeight: "80vh" }}>
         <HomePage />
       </div>
-      <div id="AboutPage" className="pt-32" style={{ height: "80vh" }}>
+      <div id="AboutPage" className="pt-32" style={{ minHeight: "80vh" }}>
         <AboutPage />
       </div>
-      <div id="SkillsPage" className="pt-32" style={{ height: "80vh" }}>
+      <div id="SkillsPage" className="pt-32" style={{ minHeight: "80vh" }}>
         <SkillsPage />
       </div>
-      <div id="ProjectsPage" className="pt-32" style={{ height: "80vh" }}>
+      <div id="ProjectsPage" className="pt-32" style={{ minHeight: "80vh" }}>
         <ProjectsPage />
       </div>
-      <div id="ContactPage" className="pt-32" style={{ height: "80vh" }}>
+      <div id="ContactPage" className="pt-32" style={{ minHeight: "80vh" }}>
         <ContactPage />
       </div>
     </main>

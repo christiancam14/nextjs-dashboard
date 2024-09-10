@@ -25,8 +25,33 @@ input[type="number"]::-webkit-outer-spin-button {
   scroll-behavior: smooth;
 }
 
-.scrollbar-none {
+* {
   scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.icon-stack {
+  color: rgb(31 41 55);
+  width: 24px !important;
+  height: 24px !important;
+  transition: all 0.25s;
+}
+
+div:has(.icon-span:hover) .icon-span:not(:hover) {
+  background-color: rgb(64, 74, 88);
+}
+
+div:has(.icon-span:hover) .icon-span:not(:hover) .icon-stack {
+  background-color: rgb(64, 74, 88);
+  color: rgba(31, 41, 55, 0.7);
+  transform: scale(0.9);
+}
+
+.icon-stack-light {
+  color: rgb(31 41 55);
+  width: 24px !important;
+  height: 24px !important;
+  transition: all 0.25s;
 }
 
 header {
