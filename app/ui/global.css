@@ -97,6 +97,11 @@ div:has(.icon-span:hover) .icon-span:not(:hover) .icon-stack {
   border-radius: 6px;
 }
 
+.img-card-project {
+  width: 296px;
+  height: 296px;
+}
+
 header {
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(8px);
