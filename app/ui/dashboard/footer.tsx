@@ -12,7 +12,7 @@ export default function Footer() {
         >
           &lt;Portfolio / &gt;
         </Link>
-        <div className="hidden md:flex flex-col space-x-2 md:space-x-0 items-center gap-2">
+        <div className="flex flex-col space-x-2 md:space-x-0 items-center gap-2">
           <NavFooterLinks />
         </div>
       </nav>

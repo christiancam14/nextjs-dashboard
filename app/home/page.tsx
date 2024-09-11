@@ -14,9 +14,12 @@ export default function HomePage() {
               Christian Camacho Galvis
             </h2>
             <p className="text-2xl font-bold">Frontend developer</p>
+            <p className="text-lg max-w-96 mx-auto md:mr-0 md:ml-auto">
+              2+ Years of Experience
+            </p>
             <p className="text-medium max-w-96 mx-auto md:mr-0 md:ml-auto">
-              I am a web developer with over 2 years of experience in frontend
-              development
+              Passionate about creating engaging user interfaces andtransform
+              ideas into responsive, high-performance websites.
             </p>
             <div className="flex mt-4 md:mt-0 md:justify-end md:gap-4">
               <a

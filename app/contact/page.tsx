@@ -12,6 +12,7 @@ interface stack {
   element: IconType;
   url: string;
   level: string;
+  info: string;
 }
 
 const stackContact: stack[] = [
@@ -20,24 +21,28 @@ const stackContact: stack[] = [
     element: SiTelegram,
     url: "https://telegram.me/christiancamachogalvis",
     level: "Telegram",
+    info: "+57 3186898839",
   },
   {
     name: "Whatsapp",
     element: SiWhatsapp,
     url: "https://api.whatsapp.com/send?phone=573186898839",
     level: "Whatsapp",
+    info: "+57 3186898839",
   },
   {
     name: "Gmail",
     element: SiGmail,
     url: "mailto:chriscamacho1045@gmail.com",
     level: "Gmail",
+    info: "chriscamacho1045@gmail.com",
   },
   {
     name: "LinkedIn",
     element: SiLinkedin,
     url: "https://www.linkedin.com/in/christian-camacho-galvis/",
     level: "LinkedIn",
+    info: "/in/christian-camacho-galvis/",
   },
 ];
 
@@ -47,10 +52,10 @@ export default function ContactPage() {
       <div className="flex flex-col max-w-screen-xl mx-auto px-6 md:px-12">
         <div className="text-center">
           <h3 className="text-2xl mb-12">Contact</h3>
-          <div className="flex flex-wrap justify-center gap-8 mt-4 self-center">
+          <div className="flex flex-col md:flex-row flex-wrap justify-center gap-y-8 mt-4 self-center">
             {stackContact.map((item, index) => (
               <div
-                className="flex flex-col flex-1 items-center justify-center"
+                className="flex flex-col flex-mid items-center justify-center"
                 key={index}
               >
                 <a
@@ -65,6 +70,7 @@ export default function ContactPage() {
                   </Tooltip>
                   <span className="text-white mt-2">{item.level}</span>
                 </a>
+                <span className="text-white mt-2">{item.info}</span>
               </div>
             ))}
           </div>
