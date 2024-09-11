@@ -2,6 +2,7 @@ import { Tooltip } from "@nextui-org/react";
 import { Metadata } from "next";
 import { IconType } from "react-icons/lib";
 import { SiGmail, SiLinkedin, SiTelegram, SiWhatsapp } from "react-icons/si";
+import Reveal from "../ui/dashboard/reveal";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -50,27 +51,33 @@ export default function ContactPage() {
   return (
     <section className="w-screen">
       <div className="flex flex-col max-w-screen-xl mx-auto px-6 md:px-12">
-        <div className="text-center">
-          <h3 className="text-2xl mb-12">Contact</h3>
+        <div className="text-center flex flex-col items-center">
+          <Reveal>
+            <h3 className="text-2xl mb-12">Contact</h3>
+          </Reveal>
           <div className="flex flex-col md:flex-row flex-wrap justify-center gap-y-8 mt-4 self-center">
             {stackContact.map((item, index) => (
               <div
                 className="flex flex-col flex-mid items-center justify-center"
                 key={index}
               >
-                <a
-                  className="flex flex-col justify- items-center"
-                  href={item.url}
-                  target="_blank"
-                >
-                  <Tooltip content={item.name}>
-                    <span className="icon-span bg-sky-100 p-2 rounded-full">
-                      <item.element className="icon-stack-light text-sky-100" />
-                    </span>
-                  </Tooltip>
-                  <span className="text-white mt-2">{item.level}</span>
-                </a>
-                <span className="text-white mt-2">{item.info}</span>
+                <Reveal>
+                  <a
+                    className="flex flex-col justify- items-center"
+                    href={item.url}
+                    target="_blank"
+                  >
+                    <Tooltip content={item.name}>
+                      <span className="icon-span bg-sky-100 p-2 rounded-full">
+                        <item.element className="icon-stack-light text-sky-100" />
+                      </span>
+                    </Tooltip>
+                    <span className="text-white mt-2">{item.level}</span>
+                  </a>
+                </Reveal>
+                <Reveal>
+                  <span className="text-white mt-2">{item.info}</span>
+                </Reveal>
               </div>
             ))}
           </div>

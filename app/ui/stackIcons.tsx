@@ -17,6 +17,7 @@ import {
   SiTypescript,
   SiWordpress,
 } from "react-icons/si";
+import Reveal from "./dashboard/reveal";
 
 interface stack {
   name: string;
@@ -116,57 +117,60 @@ const stackUtilities: stack[] = [
 export const StackIcons = () => {
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex flex-col gap-3">
-        <h3 className="text-xl text-gray-800 bold">Frontend</h3>
+      <div className="flex flex-col items-center gap-3">
+        <Reveal>
+          <h3 className="text-xl text-gray-800 bold">Frontend</h3>
+        </Reveal>
         <div className="flex flex-wrap justify-center gap-8 self-center">
           {stackFront.map((item, index) => (
-            <div
-              className="flex flex-col flex-1 items-center justify-center"
-              key={index}
-            >
-              <Tooltip content={item.name}>
-                <span className="icon-span bg-gray-800 p-2 rounded-full">
-                  <item.element className="icon-stack" color="white" />
-                </span>
-              </Tooltip>
-              <span className="text-gray-800">{item.level}</span>
-            </div>
+            <Reveal key={index}>
+              <div className="flex flex-col flex-1 items-center justify-center">
+                <Tooltip content={item.name}>
+                  <span className="icon-span bg-gray-800 p-2 rounded-full">
+                    <item.element className="icon-stack" color="white" />
+                  </span>
+                </Tooltip>
+                <span className="text-gray-800">{item.level}</span>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-3">
-        <h3 className="text-xl text-gray-800  mt-2">Backend</h3>
+      <div className="flex flex-col items-center gap-3">
+        <Reveal>
+          <h3 className="text-xl text-gray-800  mt-2">Backend</h3>
+        </Reveal>
         <div className="flex flex-wrap justify-center gap-8 self-center">
           {stackBack.map((item, index) => (
-            <div
-              className="flex flex-col flex-1 items-center justify-center"
-              key={index}
-            >
-              <Tooltip content={item.name}>
-                <span className="icon-span bg-gray-800 p-2 rounded-full">
-                  <item.element className="icon-stack" color="white" />
-                </span>
-              </Tooltip>
-              <span className="text-gray-800">{item.level}</span>
-            </div>
+            <Reveal key={index}>
+              <div className="flex flex-col flex-1 items-center justify-center">
+                <Tooltip content={item.name}>
+                  <span className="icon-span bg-gray-800 p-2 rounded-full">
+                    <item.element className="icon-stack" color="white" />
+                  </span>
+                </Tooltip>
+                <span className="text-gray-800">{item.level}</span>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-3  mt-2">
-        <h3 className="text-xl text-gray-800">Utilities</h3>
+      <div className="flex flex-col items-center gap-3  mt-2">
+        <Reveal>
+          <h3 className="text-xl text-gray-800">Utilities</h3>
+        </Reveal>
         <div className="flex flex-wrap justify-center gap-8 self-center">
           {stackUtilities.map((item, index) => (
-            <div
-              className="flex flex-col flex-1 items-center justify-center"
-              key={index}
-            >
-              <Tooltip content={item.name}>
-                <span className="icon-span bg-gray-800 p-2 rounded-full">
-                  <item.element className="icon-stack" color="white" />
-                </span>
-              </Tooltip>
-              <span className="text-gray-800">{item.level}</span>
-            </div>
+            <Reveal key={index}>
+              <div className="flex flex-col flex-1 items-center justify-center">
+                <Tooltip content={item.name}>
+                  <span className="icon-span bg-gray-800 p-2 rounded-full">
+                    <item.element className="icon-stack" color="white" />
+                  </span>
+                </Tooltip>
+                <span className="text-gray-800">{item.level}</span>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

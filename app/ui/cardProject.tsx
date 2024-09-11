@@ -8,6 +8,8 @@ import { PiRepeatOnce } from "react-icons/pi";
 import { GiNextButton, GiPreviousButton } from "react-icons/gi";
 import { Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import Reveal from "./dashboard/reveal";
+import styles from "@/app/ui/home.module.css";
 
 interface Project {
   id: number;
@@ -15,6 +17,8 @@ interface Project {
   title: string;
   url: string;
   stack: string;
+  time1: string;
+  time2: string;
 }
 
 const projects: Project[] = [
@@ -24,6 +28,8 @@ const projects: Project[] = [
     title: "Project One",
     url: "https://projectone.com",
     stack: "React, Node.js, MongoDB",
+    time1: "1:24",
+    time2: "4:53",
   },
   {
     id: 2,
@@ -31,6 +37,8 @@ const projects: Project[] = [
     title: "Project Two",
     url: "https://projecttwo.com",
     stack: "Angular, Firebase",
+    time1: "0:44",
+    time2: "3:23",
   },
   {
     id: 3,
@@ -38,6 +46,8 @@ const projects: Project[] = [
     title: "Project Three",
     url: "https://projectthree.com",
     stack: "Vue, Laravel",
+    time1: "1:00",
+    time2: "5:05",
   },
   {
     id: 4,
@@ -45,6 +55,8 @@ const projects: Project[] = [
     title: "Project Four",
     url: "https://projectfour.com",
     stack: "React Native, Expo",
+    time1: "0:16",
+    time2: "3:45",
   },
   {
     id: 5,
@@ -52,14 +64,18 @@ const projects: Project[] = [
     title: "Project Five",
     url: "https://projectfive.com",
     stack: "Next.js, TailwindCSS",
+    time1: "0:45",
+    time2: "3:02",
   },
 ];
 
 export function CardProject() {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(1);
+  const [direction, setDirection] = useState("right");
 
   // Función para ir al siguiente proyecto
   const nextProject = () => {
+    setDirection("right");
     setCurrentProjectIndex((prevIndex) =>
       prevIndex === projects.length - 1 ? 0 : prevIndex + 1
     );
@@ -67,6 +83,7 @@ export function CardProject() {
 
   // Función para ir al proyecto anterior
   const previousProject = () => {
+    setDirection("left");
     setCurrentProjectIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
@@ -78,29 +95,35 @@ export function CardProject() {
     <div className="card-project max-w-sm w-80 bg-sky-100 rounded-lg shadow-md overflow-hidden p-3">
       <motion.div
         key={currentProject.id}
-        initial={{ opacity: 0, x: -100 }}
+        initial={{ opacity: 0, x: direction === "right" ? "100%" : "-100%" }}
         animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 100 }}
+        exit={{ opacity: 0, x: direction === "right" ? "-100%" : "100%" }}
         transition={{ duration: 0.5 }}
       >
-        <Image
-          src={currentProject.img}
-          alt="Album Cover"
-          width={300}
-          height={300}
-          className="w-full object-cover h-auto rounded-lg aspect-square	"
-        />
+        <Reveal>
+          <Image
+            src={currentProject.img}
+            alt="Album Cover"
+            width={300}
+            height={300}
+            className="w-full object-cover h-auto rounded-lg aspect-square	"
+          />
+        </Reveal>
       </motion.div>
 
       <div className="py-4">
         <div className="flex items-center justify-between">
           <div className="text-start">
-            <h2 className="text-lg font-semibold text-gray-900">
-              {currentProject.title}
-            </h2>
-            <span className="text-sm text-gray-600">
-              {currentProject.stack}
-            </span>
+            <Reveal>
+              <h2 className="text-lg font-semibold text-gray-900">
+                {currentProject.title}
+              </h2>
+            </Reveal>
+            <Reveal>
+              <span className="text-sm text-gray-600">
+                {currentProject.stack}
+              </span>
+            </Reveal>
           </div>
           <div>
             <Tooltip content="Like">
@@ -117,8 +140,8 @@ export function CardProject() {
         <div className="mt-4">
           <div className="w-full bg-gray-300 rounded-full h-2.5"></div>
           <div className="flex justify-between text-xs text-gray-600 mt-1">
-            <span>1:24</span>
-            <span>3:45</span>
+            <span>{currentProject.time1}</span>
+            <span>{currentProject.time2}</span>
           </div>
         </div>
 
