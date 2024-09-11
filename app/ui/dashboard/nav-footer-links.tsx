@@ -23,7 +23,7 @@ export default function NavFooterLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              "text-gray-800 flex h-[48px] m-0 grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium hover:bg-sky-100 hover:text-slate-950 hover:font-extrabold	 md:flex-none md:justify-start md:p-2 md:px-3",
+              "text-gray-800 flex h-[48px] ml-0 mr-0 mt-0 mb-0 grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium hover:bg-sky-100 hover:text-slate-950 hover:font-extrabold	 md:flex-none md:justify-start md:p-2 md:px-3",
               {
                 "font-extrabold	underline ": pathname === link.href,
               }

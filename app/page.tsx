@@ -10,16 +10,16 @@ export default function Page() {
       <div id="Home">
         <HomePage />
       </div>
-      <div id="AboutPage" className="pt-28">
+      <div id="AboutPage" className="pt-24">
         <AboutPage />
       </div>
-      <div id="SkillsPage" className="pt-28">
+      <div id="SkillsPage" className="pt-24">
         <SkillsPage />
       </div>
-      <div id="ProjectsPage" className="pt-28">
+      <div id="ProjectsPage" className="pt-24">
         <ProjectsPage />
       </div>
-      <div id="ProjectsPage" className="pt-28">
+      <div className="pt-16">
         <CertificationsPage />
       </div>
     </main>

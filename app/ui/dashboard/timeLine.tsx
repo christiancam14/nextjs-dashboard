@@ -41,7 +41,7 @@ const Timeline = () => (
             </span>
           </div>
           <Reveal>
-            <div className="desc text-sky-100 font-bold rounded-md">
+            <div className="desc text-gray-800 md:text-sky-100 font-bold rounded-md">
               {item.description}
             </div>
           </Reveal>

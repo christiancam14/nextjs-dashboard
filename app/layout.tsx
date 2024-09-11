@@ -40,7 +40,7 @@ export default function RootLayout({
           <div className="flex-grow md:overflow-y-auto scrollbar-none text-sky-100  scroll-smoth scrollbar-none">
             {children}
           </div>
-          <div className="w-full flex-none mt-16">
+          <div className="w-full flex-none mt-0">
             <Footer />
           </div>
         </div>
