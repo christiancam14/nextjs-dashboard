@@ -5,10 +5,12 @@ const nextConfig = {
   experimental: {
     ppr: "incremental",
   },
+  /*
   i18n: {
     locales: ["en", "es"],
     defaultLocale: "en",
   },
+  */
 };
 
 export default nextConfig;

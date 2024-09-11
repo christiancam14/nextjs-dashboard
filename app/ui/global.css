@@ -37,6 +37,14 @@ input[type="number"]::-webkit-outer-spin-button {
   transition: all 0.25s;
 }
 
+.icon-span {
+  transition: all 0.25s;
+}
+
+.icon-stack:hover {
+  scale: 1.04;
+}
+
 div:has(.icon-span:hover) .icon-span:not(:hover) {
   background-color: rgb(64, 74, 88);
 }
@@ -52,6 +60,25 @@ div:has(.icon-span:hover) .icon-span:not(:hover) .icon-stack {
   width: 24px !important;
   height: 24px !important;
   transition: all 0.25s;
+}
+
+.icon-project {
+  width: 24px !important;
+  height: 24px !important;
+  transition: all 0.25s;
+}
+
+.card-project {
+  transition: all 0.25s;
+}
+
+.card-project:hover {
+  scale: 1.04;
+}
+
+.cont-card-project:has(.card-project:hover) .card-project:not(:hover) {
+  background-color: rgb(64, 74, 88);
+  scale: 0.96;
 }
 
 header {

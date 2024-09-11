@@ -3,6 +3,7 @@ import { inter } from "./ui/fonts";
 
 import { Metadata } from "next";
 import Header from "./ui/dashboard/header";
+import Footer from "./ui/dashboard/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -32,6 +33,9 @@ export default function RootLayout({
           </div>
           <div className="flex-grow md:overflow-y-auto scrollbar-none text-sky-100  scroll-smoth scrollbar-none">
             {children}
+          </div>
+          <div className="w-full flex-none mt-16">
+            <Footer />
           </div>
         </div>
       </body>

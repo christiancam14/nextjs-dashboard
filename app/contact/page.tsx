@@ -28,7 +28,7 @@ const stackContact: stack[] = [
     level: "Whatsapp",
   },
   {
-    name: "Email",
+    name: "Gmail",
     element: SiGmail,
     url: "mailto:chriscamacho1045@gmail.com",
     level: "Gmail",
@@ -43,10 +43,10 @@ const stackContact: stack[] = [
 
 export default function ContactPage() {
   return (
-    <section className="w-screen pt-20 md:pt-32">
+    <section className="w-screen">
       <div className="flex flex-col max-w-screen-xl mx-auto px-6 md:px-12">
         <div className="text-center">
-          <h3 className="text-2xl">Contact</h3>
+          <h3 className="text-2xl mb-12">Contact</h3>
           <div className="flex flex-wrap justify-center gap-8 mt-4 self-center">
             {stackContact.map((item, index) => (
               <div
