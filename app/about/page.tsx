@@ -22,12 +22,12 @@ export default function AboutPage() {
           <p className={`${principalFont.className} text-center text-sky-100`}>
             With 2+ years of expertise in frontend development and UI/UX design,
             I specialize in building seamless user experiences. Proficient in
-            Angular, I create dynamic interfaces, consume microservices, and
-            implement secure authentication. I&apos;ve developed custom WordPress
-            plugins using PHP and JavaScript, and built scalable RESTful APIs
-            with NestJs and TypeOrm. Experienced with Git for version control on
-            GitHub and GitLab, I thrive in Scrum environments, showcasing
-            leadership, teamwork, and project management skills.
+            Angular, I develop dynamic interfaces, integrate microservices, and
+            implement secure authentication. I&apos;ve developed custom
+            WordPress plugins using PHP and JavaScript, and built scalable
+            RESTful APIs with NestJs and TypeOrm. Experienced in Git for version
+            control on GitHub and GitLab, I excel in Scrum environments,
+            demonstrating leadership, teamwork, and project management skills.
           </p>
         </Reveal>
         <div className="my-12 w-full">

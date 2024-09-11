@@ -31,7 +31,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal>
               <p className="text-medium max-w-96 mx-auto md:mr-0 md:ml-auto">
-                Passionate about creating engaging user interfaces andtransform
+                Passionate about creating engaging user interfaces and transform
                 ideas into responsive, high-performance websites.
               </p>
             </Reveal>

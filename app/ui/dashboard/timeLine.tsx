@@ -5,13 +5,13 @@ const timelineData = [
     title: "Freelancer",
     time: "2024 - present",
     description:
-      "Develops content updates and improvements for company websites built on WordPress, implementing custom adjustments, optimizing SEO, and enhancing website functionality and security.",
+      "Develops content updates and improvements for company websites built on WordPress, implementing custom adjustments, optimizing SEO, and enhancing site functionality and security.",
   },
   {
     title: "Hexa Solutions S.A.S.",
     time: "2022 - 2024",
     description:
-      "Led web portal development in WordPress, creating custom PHP plugins for content management and SEO enhancements. Revamped an Angular-based payment gateway, reducing abandonment rates and boosting digital transactions. Built web applications, including a pet tracking manager and a business data collection platform.",
+      "Led web portal development in WordPress, creating custom PHP plugins for content management and SEO improvements. Revamped an Angular-based payment gateway, reducing abandonment rates and increasing digital transactions. Developed web applications, including a pet tracking manager and a business data collection platform.",
   },
   {
     title: "Hyperlink S.A.S",
@@ -33,7 +33,9 @@ const Timeline = () => (
       <li key={index}>
         <div className={`direction-${index % 2 === 0 ? "l" : "r"}`}>
           <div className="flag-wrapper">
-            <span className="flag text-gray-800 font-extrabold">{item.title}</span>
+            <span className="flag text-gray-800 font-extrabold">
+              {item.title}
+            </span>
             <span className="time-wrapper">
               <span className="time text-gray-800 font-semibold">
                 {item.time}
