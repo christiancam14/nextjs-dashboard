@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div>
-      <h1>About Us</h1>
-      <p>This is the about page</p>
+      <h2>Projects Section</h1>
+      <p>This is the project section where you will find cards with other projects</p>
     </div>
   );
 }
