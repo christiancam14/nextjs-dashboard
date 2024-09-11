@@ -1,5 +1,4 @@
 import Link from "next/link";
-import NavLinks from "@/app/ui/dashboard/nav-links";
 import NavFooterLinks from "./nav-footer-links";
 
 export default function Footer() {

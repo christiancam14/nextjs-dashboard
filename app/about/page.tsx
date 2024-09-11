@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { motion } from "framer-motion";
 import Reveal from "../ui/dashboard/reveal";
 
 export const metadata: Metadata = {

@@ -4,7 +4,6 @@ import { inter } from "./ui/fonts";
 import { Metadata } from "next";
 import Header from "./ui/dashboard/header";
 import Footer from "./ui/dashboard/footer";
-import { motion, useScroll, useSpring } from "framer-motion";
 import Progressbar from "./ui/dashboard/progressbar";
 
 export const metadata: Metadata = {

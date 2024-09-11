@@ -9,7 +9,6 @@ import { GiNextButton, GiPreviousButton } from "react-icons/gi";
 import { Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Reveal from "./dashboard/reveal";
-import styles from "@/app/ui/home.module.css";
 
 interface Project {
   id: number;

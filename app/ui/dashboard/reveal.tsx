@@ -1,11 +1,5 @@
 "use client";
-import {
-  motion,
-  useAnimation,
-  useInView,
-  useScroll,
-  useSpring,
-} from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface Props {
@@ -24,7 +18,7 @@ export default function Reveal({ children, width = "fit-content" }: Props) {
       mainControls.start("visible");
       slideControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls, slideControls]);
 
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
