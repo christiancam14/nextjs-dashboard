@@ -19,8 +19,8 @@ import {
   SiTypescript,
   SiWordpress,
 } from "react-icons/si";
-import Reveal from "./dashboard/reveal";
-import RevealItems from "./dashboard/reveal-items";
+import Reveal from "./reveal";
+import RevealItems from "./reveal-items";
 
 interface stack {
   name: string;

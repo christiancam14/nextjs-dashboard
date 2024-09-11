@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { CardProject } from "../ui/cardProject";
+import { CardProject } from "../ui/dashboard/cardProject";
 import Reveal from "../ui/dashboard/reveal";
 
 export const metadata: Metadata = {

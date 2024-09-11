@@ -8,8 +8,8 @@ import { PiRepeatOnce } from "react-icons/pi";
 import { GiNextButton, GiPreviousButton } from "react-icons/gi";
 import { Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import Reveal from "./dashboard/reveal";
-import HeartBeat from "./dashboard/heartBeat";
+import Reveal from "./reveal";
+import HeartBeat from "./heartBeat";
 
 interface Project {
   id: number;

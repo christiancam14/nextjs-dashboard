@@ -2,7 +2,7 @@
 
 import Reveal from "../ui/dashboard/reveal";
 import { principalFont } from "../ui/fonts";
-import StackIcons from "../ui/stackIcons";
+import StackIcons from "../ui/dashboard/stackIcons";
 import { motion } from "framer-motion";
 
 export default function SkillsPage() {
