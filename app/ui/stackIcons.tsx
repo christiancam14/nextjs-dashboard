@@ -15,6 +15,7 @@ import {
   SiPrimeng,
   SiTailwindcss,
   SiTypescript,
+  SiWordpress,
 } from "react-icons/si";
 
 interface stack {
@@ -98,6 +99,11 @@ const stackUtilities: stack[] = [
   {
     name: "Git",
     element: SiGit,
+    level: "Mid",
+  },
+  {
+    name: "Wordpress",
+    element: SiWordpress,
     level: "Mid",
   },
   {

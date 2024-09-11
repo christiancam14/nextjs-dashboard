@@ -7,6 +7,7 @@ import { LiaRandomSolid } from "react-icons/lia";
 import { PiRepeatOnce } from "react-icons/pi";
 import { GiNextButton, GiPreviousButton } from "react-icons/gi";
 import { Tooltip } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 interface Project {
   id: number;
@@ -75,13 +76,21 @@ export function CardProject() {
 
   return (
     <div className="card-project max-w-sm w-80 bg-sky-100 rounded-lg shadow-md overflow-hidden p-3">
-      <Image
-        src={currentProject.img}
-        alt="Album Cover"
-        width={300}
-        height={300}
-        className="w-full object-cover h-auto rounded-lg aspect-square	"
-      />
+      <motion.div
+        key={currentProject.id}
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 100 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Image
+          src={currentProject.img}
+          alt="Album Cover"
+          width={300}
+          height={300}
+          className="w-full object-cover h-auto rounded-lg aspect-square	"
+        />
+      </motion.div>
 
       <div className="py-4">
         <div className="flex items-center justify-between">

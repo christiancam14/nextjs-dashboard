@@ -85,6 +85,18 @@ div:has(.icon-span:hover) .icon-span:not(:hover) .icon-stack {
   flex: 1 1 50%;
 }
 
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: white;
+  transform-origin: 0%;
+  z-index: 20;
+  border-radius: 6px;
+}
+
 header {
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(8px);
