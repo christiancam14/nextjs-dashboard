@@ -1,5 +1,5 @@
 import "@/app/ui/global.css";
-import { inter } from "./ui/fonts";
+import { principalFont } from "./ui/fonts";
 
 import { Metadata } from "next";
 import Header from "./ui/dashboard/header";
@@ -30,7 +30,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} antialiased bg-gray-950  scroll-smoth max-w-fit overflow-x-hidden	`}
+        className={`${principalFont.className} antialiased bg-gray-950  scroll-smoth max-w-fit overflow-x-hidden	`}
       >
         <div className="flex flex-col  md:overflow-hidden mx-auto	scroll-smoth">
           <div className="w-full flex-none z-10 px-6 md:px-12">

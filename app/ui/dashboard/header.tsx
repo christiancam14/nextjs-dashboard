@@ -1,6 +1,7 @@
 import Link from "next/link";
 import NavLinks from "@/app/ui/dashboard/nav-links";
 import Reveal from "./reveal";
+import { principalFont } from "../fonts";
 
 export default function Header() {
   return (
@@ -8,7 +9,7 @@ export default function Header() {
       <nav className="flex flex-col md:flex-row justify-between items-center max-w-screen-xl	mx-auto px-6 md:px-12">
         <Reveal>
           <Link
-            className="flex items-end justify-start	text-sky-100 md:p-4 text-2xl"
+            className={`${principalFont.className} flex items-end justify-start	text-sky-100 md:p-4 text-2xl`}
             href="/"
           >
             &lt;Portfolio / &gt;

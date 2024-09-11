@@ -144,7 +144,7 @@ export const StackIcons = () => {
                       <item.element className="icon-stack" color="white" />
                     </span>
                   </Tooltip>
-                  <span className="text-gray-800">{item.level}</span>
+                  {/* <span className="text-gray-800">{item.level}</span> */}
                 </div>
               </Reveal>
             </RevealItems>
@@ -165,7 +165,7 @@ export const StackIcons = () => {
                       <item.element className="icon-stack" color="white" />
                     </span>
                   </Tooltip>
-                  <span className="text-gray-800">{item.level}</span>
+                  {/* <span className="text-gray-800">{item.level}</span> */}
                 </div>
               </Reveal>
             </RevealItems>
@@ -186,7 +186,7 @@ export const StackIcons = () => {
                       <item.element className="icon-stack" color="white" />
                     </span>
                   </Tooltip>
-                  <span className="text-gray-800">{item.level}</span>
+                  {/* <span className="text-gray-800">{item.level}</span> */}
                 </div>
               </Reveal>
             </RevealItems>

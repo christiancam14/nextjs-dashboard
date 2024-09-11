@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { andika } from "@/app/ui/fonts";
+import { principalFont } from "@/app/ui/fonts";
 import Search from "@/app/ui/search";
 import { FormattedCustomersTable } from "@/app/lib/definitions";
 
@@ -10,7 +10,7 @@ export default async function CustomersTable({
 }) {
   return (
     <div className="w-full">
-      <h1 className={`${andika.className} mb-8 text-xl md:text-2xl`}>
+      <h1 className={`${principalFont.className} mb-8 text-xl md:text-2xl`}>
         Customers
       </h1>
       <Search placeholder="Search customers..." />

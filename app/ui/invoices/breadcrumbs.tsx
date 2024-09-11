@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import Link from "next/link";
-import { andika } from "@/app/ui/fonts";
+import { principalFont } from "@/app/ui/fonts";
 
 interface Breadcrumb {
   label: string;
@@ -15,7 +15,7 @@ export default function Breadcrumbs({
 }) {
   return (
     <nav aria-label="Breadcrumb" className="mb-6 block">
-      <ol className={clsx(andika.className, "flex text-xl md:text-2xl")}>
+      <ol className={clsx(principalFont.className, "flex text-xl md:text-2xl")}>
         {breadcrumbs.map((breadcrumb, index) => (
           <li
             key={breadcrumb.href}

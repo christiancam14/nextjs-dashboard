@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaPause, FaRegHeart } from "react-icons/fa";
 import { LiaRandomSolid } from "react-icons/lia";
 import { PiRepeatOnce } from "react-icons/pi";
@@ -91,6 +91,16 @@ export function CardProject() {
 
   const currentProject = projects[currentProjectIndex];
 
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => (prev < 100 ? prev + 1 : 0));
+    }, 1000); // Simula el avance cada segundo
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="card-project max-w-sm w-80 bg-sky-100 rounded-lg shadow-md overflow-hidden p-3">
       <motion.div
@@ -141,7 +151,13 @@ export function CardProject() {
         </div>
 
         <div className="mt-4">
-          <div className="w-full bg-gray-300 rounded-full h-2.5"></div>
+          <div className="w-full bg-gray-300 rounded-full h-2.5">
+            <div
+              className="bg-gray-800 h-2.5 rounded-full"
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+
           <div className="flex justify-between text-xs text-gray-600 mt-1">
             <span>{currentProject.time1}</span>
             <span>{currentProject.time2}</span>
@@ -169,12 +185,17 @@ export function CardProject() {
           </Tooltip>
 
           <Tooltip content="See project">
-            <button
-              aria-label="play/pause"
-              className="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full"
+            <a
+              href="https://github.com/christiancam14/nextjs-dashboard"
+              target="_blank"
             >
-              <FaPause className="icon-project" />
-            </button>
+              <button
+                aria-label="play/pause"
+                className="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full"
+              >
+                <FaPause className="icon-project" />
+              </button>
+            </a>
           </Tooltip>
 
           <Tooltip content="Next project">

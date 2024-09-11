@@ -1,60 +1,50 @@
+import Reveal from "./reveal";
+
 const timelineData = [
   {
     title: "Freelancer",
-    time: "2013 - present",
-    description: "My current employment. Way better than the position before!",
-    direction: "r",
+    time: "2024 - present",
+    description:
+      "Develops content updates and improvements for company websites built on WordPress, implementing custom adjustments, optimizing SEO, and enhancing website functionality and security.",
   },
   {
-    title: "Apple Inc.",
-    time: "2011 - 2013",
+    title: "Hexa Solutions S.A.S.",
+    time: "2022 - 2024",
     description:
-      "My first employer. All the stuff I've learned and projects I've been working on.",
-    direction: "l",
+      "Led web portal development in WordPress, creating custom PHP plugins for content management and SEO enhancements. Revamped an Angular-based payment gateway, reducing abandonment rates and boosting digital transactions. Built web applications, including a pet tracking manager and a business data collection platform.",
   },
   {
-    title: "Harvard University",
-    time: "2008 - 2011",
+    title: "Hyperlink S.A.S",
+    time: "2021 - 2022",
     description:
-      "A description of all the lectures and courses I have taken and my final degree?",
-    direction: "r",
+      "Designed dynamic, client-specific web templates using HTML, jQuery, and Bootstrap, optimizing for fast load times and seamless user experiences.",
+  },
+  {
+    title: "Roojotech S.A.S",
+    time: "2021",
+    description:
+      "Developed a custom administrative platform using Microsoft Power Platform, streamlining operations and automating processes to enhance productivity.",
   },
 ];
 
 const Timeline = () => (
-  /*
-  <ul classNameName="timeline">
-    {timelineData.map((item, index) => (
-      <li key={index}>
-        <div classNameName={`direction-${item.direction}`}>
-          <div classNameName="flag-wrapper">
-            <span classNameName="flag">{item.title}</span>
-            <span classNameName="time-wrapper">
-              <span classNameName="time">{item.time}</span>
-            </span>
-          </div>
-          <div classNameName="desc">{item.description}</div>
-        </div>
-      </li>
-    ))}
-  </ul>
-  */
-
   <ul className="timeline">
     {timelineData.map((item, index) => (
       <li key={index}>
-        <div className={`direction-${item.direction}`}>
+        <div className={`direction-${index % 2 === 0 ? "l" : "r"}`}>
           <div className="flag-wrapper">
-            <span className="flag text-gray-800 font-bold">{item.title}</span>
+            <span className="flag text-gray-800 font-extrabold">{item.title}</span>
             <span className="time-wrapper">
               <span className="time text-gray-800 font-semibold">
                 {item.time}
               </span>
             </span>
           </div>
-          <div className="desc text-gray-800 font-bold rounded-md">
-            {item.description}
-          </div>
+          <Reveal>
+            <div className="desc text-sky-100 font-bold rounded-md">
+              {item.description}
+            </div>
+          </Reveal>
         </div>
       </li>
     ))}

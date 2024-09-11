@@ -54,7 +54,7 @@ interface Props {
 
 export default function ContactPage({ isDark = true }: Props) {
   return (
-    <section className="w-screen">
+    <section className="w-auto md:w-screen">
       <div className="flex flex-col max-w-screen-xl mx-auto px-6 md:px-12">
         <div className="text-center flex flex-col items-center">
           <Reveal>

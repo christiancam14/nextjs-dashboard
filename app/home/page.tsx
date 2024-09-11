@@ -6,6 +6,7 @@ import { MdContacts } from "react-icons/md";
 
 import { FaRegFilePdf } from "react-icons/fa";
 import Reveal from "../ui/dashboard/reveal";
+import { inter } from "../ui/fonts";
 
 export default function HomePage() {
   return (
@@ -14,9 +15,11 @@ export default function HomePage() {
         <div className="flex flex-col-reverse md:flex-row shrink-0 items-end rounded-lg pt-6 pb-8 md:p-4  col md:row">
           <div className="flex flex-col flex-1 col-6 text-center items-center md:items-end md:text-right self-center gap-2">
             <Reveal>
-              <h2 className="text-4xl font-extrabold	">
-                Christian Camacho Galvis
-              </h2>
+              <>
+                <h2 className={`${inter.className} text-4xl font-extrabold`}>
+                  Christian Camacho Galvis
+                </h2>
+              </>
             </Reveal>
             <Reveal>
               <p className="text-2xl font-bold">Frontend developer</p>
