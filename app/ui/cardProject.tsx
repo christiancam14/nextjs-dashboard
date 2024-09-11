@@ -9,6 +9,7 @@ import { GiNextButton, GiPreviousButton } from "react-icons/gi";
 import { Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Reveal from "./dashboard/reveal";
+import HeartBeat from "./dashboard/heartBeat";
 
 interface Project {
   id: number;
@@ -98,6 +99,7 @@ export function CardProject() {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: direction === "right" ? "-100%" : "100%" }}
         transition={{ duration: 0.5 }}
+        className="img-card-project"
       >
         <Reveal>
           <Image
@@ -105,7 +107,7 @@ export function CardProject() {
             alt="Album Cover"
             width={300}
             height={300}
-            className="w-full object-cover h-auto rounded-lg aspect-square	"
+            className="w-full object-cover h-auto rounded-lg aspect-square	img-card-project"
           />
         </Reveal>
       </motion.div>
@@ -130,7 +132,9 @@ export function CardProject() {
                 aria-label="like"
                 className="text-gray-500 hover:text-red-500"
               >
-                <FaRegHeart />
+                <HeartBeat>
+                  <FaRegHeart />
+                </HeartBeat>
               </button>
             </Tooltip>
           </div>

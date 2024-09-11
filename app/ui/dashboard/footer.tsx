@@ -1,9 +1,14 @@
 import Link from "next/link";
 import NavFooterLinks from "./nav-footer-links";
+import ContactPage from "@/app/contact/page";
 
 export default function Footer() {
   return (
     <footer className="mt-28 px-3 pb-16 py-4 min-h-72 md:px-4 w-screen bg-sky-100 ">
+      <div id="ContactPage" className="pb-6 pt-27">
+        <ContactPage isDark={false} />
+      </div>
+
       <nav className="flex flex-col justify-between items-center max-w-screen-xl	mx-auto px-6 md:px-12">
         <Link
           className="flex items-end justify-start	text-gray-800 p-4 text-3xl"

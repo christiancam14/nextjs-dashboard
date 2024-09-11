@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { IconType } from "react-icons/lib";
 import { SiGmail, SiLinkedin, SiTelegram, SiWhatsapp } from "react-icons/si";
 import Reveal from "../ui/dashboard/reveal";
+import clsx from "clsx";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -47,7 +48,11 @@ const stackContact: stack[] = [
   },
 ];
 
-export default function ContactPage() {
+interface Props {
+  isDark?: boolean;
+}
+
+export default function ContactPage({ isDark = true }: Props) {
   return (
     <section className="w-screen">
       <div className="flex flex-col max-w-screen-xl mx-auto px-6 md:px-12">
@@ -72,11 +77,25 @@ export default function ContactPage() {
                         <item.element className="icon-stack-light text-sky-100" />
                       </span>
                     </Tooltip>
-                    <span className="text-white mt-2">{item.level}</span>
+                    <span
+                      className={clsx(" mt-2", {
+                        "text-white": isDark,
+                        "text-gray-800": !isDark,
+                      })}
+                    >
+                      {item.level}
+                    </span>
                   </a>
                 </Reveal>
                 <Reveal>
-                  <span className="text-white mt-2">{item.info}</span>
+                  <span
+                    className={clsx(" mt-2", {
+                      "text-white": isDark,
+                      "text-gray-800": !isDark,
+                    })}
+                  >
+                    {item.info}
+                  </span>
                 </Reveal>
               </div>
             ))}

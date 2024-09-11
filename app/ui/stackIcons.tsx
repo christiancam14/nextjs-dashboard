@@ -11,6 +11,7 @@ import {
   SiJavascript,
   SiMysql,
   SiNestjs,
+  SiPhp,
   SiPostgresql,
   SiPrimeng,
   SiTailwindcss,
@@ -18,6 +19,7 @@ import {
   SiWordpress,
 } from "react-icons/si";
 import Reveal from "./dashboard/reveal";
+import RevealItems from "./dashboard/reveal-items";
 
 interface stack {
   name: string;
@@ -85,6 +87,11 @@ const stackBack: stack[] = [
     level: "Beg",
   },
   {
+    name: "Php",
+    element: SiPhp,
+    level: "Beg",
+  },
+  {
     name: "MySql",
     element: SiMysql,
     level: "Mid",
@@ -123,16 +130,18 @@ export const StackIcons = () => {
         </Reveal>
         <div className="flex flex-wrap justify-center gap-8 self-center">
           {stackFront.map((item, index) => (
-            <Reveal key={index}>
-              <div className="flex flex-col flex-1 items-center justify-center">
-                <Tooltip content={item.name}>
-                  <span className="icon-span bg-gray-800 p-2 rounded-full">
-                    <item.element className="icon-stack" color="white" />
-                  </span>
-                </Tooltip>
-                <span className="text-gray-800">{item.level}</span>
-              </div>
-            </Reveal>
+            <RevealItems key={index} index={index}>
+              <Reveal>
+                <div className="flex flex-col flex-1 items-center justify-center">
+                  <Tooltip content={item.name}>
+                    <span className="icon-span bg-gray-800 p-2 rounded-full">
+                      <item.element className="icon-stack" color="white" />
+                    </span>
+                  </Tooltip>
+                  <span className="text-gray-800">{item.level}</span>
+                </div>
+              </Reveal>
+            </RevealItems>
           ))}
         </div>
       </div>
@@ -142,16 +151,18 @@ export const StackIcons = () => {
         </Reveal>
         <div className="flex flex-wrap justify-center gap-8 self-center">
           {stackBack.map((item, index) => (
-            <Reveal key={index}>
-              <div className="flex flex-col flex-1 items-center justify-center">
-                <Tooltip content={item.name}>
-                  <span className="icon-span bg-gray-800 p-2 rounded-full">
-                    <item.element className="icon-stack" color="white" />
-                  </span>
-                </Tooltip>
-                <span className="text-gray-800">{item.level}</span>
-              </div>
-            </Reveal>
+            <RevealItems key={index} index={index}>
+              <Reveal>
+                <div className="flex flex-col flex-1 items-center justify-center">
+                  <Tooltip content={item.name}>
+                    <span className="icon-span bg-gray-800 p-2 rounded-full">
+                      <item.element className="icon-stack" color="white" />
+                    </span>
+                  </Tooltip>
+                  <span className="text-gray-800">{item.level}</span>
+                </div>
+              </Reveal>
+            </RevealItems>
           ))}
         </div>
       </div>
@@ -161,16 +172,18 @@ export const StackIcons = () => {
         </Reveal>
         <div className="flex flex-wrap justify-center gap-8 self-center">
           {stackUtilities.map((item, index) => (
-            <Reveal key={index}>
-              <div className="flex flex-col flex-1 items-center justify-center">
-                <Tooltip content={item.name}>
-                  <span className="icon-span bg-gray-800 p-2 rounded-full">
-                    <item.element className="icon-stack" color="white" />
-                  </span>
-                </Tooltip>
-                <span className="text-gray-800">{item.level}</span>
-              </div>
-            </Reveal>
+            <RevealItems key={index} index={index}>
+              <Reveal>
+                <div className="flex flex-col flex-1 items-center justify-center">
+                  <Tooltip content={item.name}>
+                    <span className="icon-span bg-gray-800 p-2 rounded-full">
+                      <item.element className="icon-stack" color="white" />
+                    </span>
+                  </Tooltip>
+                  <span className="text-gray-800">{item.level}</span>
+                </div>
+              </Reveal>
+            </RevealItems>
           ))}
         </div>
       </div>

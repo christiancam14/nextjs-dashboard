@@ -1,5 +1,4 @@
 import AboutPage from "./about/page";
-import ContactPage from "./contact/page";
 import SkillsPage from "./skills/page";
 import ProjectsPage from "./projects/page";
 import HomePage from "./home/page";
@@ -19,9 +18,9 @@ export default function Page() {
       <div id="ProjectsPage" className="pt-28">
         <ProjectsPage />
       </div>
-      <div id="ContactPage" className="pt-28">
+      {/* <div id="ContactPage" className="pt-28">
         <ContactPage />
-      </div>
+      </div> */}
     </main>
   );
 }
