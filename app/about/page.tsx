@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Reveal from "../ui/dashboard/reveal";
 import TypingText from "../ui/dashboard/TypingText";
+import TimeLine from "../ui/dashboard/timeLine";
 
 export const metadata: Metadata = {
   title: "About",
@@ -16,6 +17,9 @@ export default function AboutPage() {
         <Reveal>
           <TypingText text="With 2+ years of expertise in frontend development and UI/UX design, I specialize in building seamless user experiences. Proficient in Angular, I create dynamic interfaces, consume microservices, and implement secure authentication. I've developed custom WordPress plugins using PHP and JavaScript, and built scalable RESTful APIs with NestJs and TypeOrm. Experienced with Git for version control on GitHub and GitLab, I thrive in Scrum environments, showcasing leadership, teamwork, and project management skills." />
         </Reveal>
+        <div className="my-12 w-full">
+          <TimeLine />
+        </div>
       </div>
     </section>
   );

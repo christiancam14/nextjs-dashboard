@@ -2,6 +2,7 @@ import AboutPage from "./about/page";
 import SkillsPage from "./skills/page";
 import ProjectsPage from "./projects/page";
 import HomePage from "./home/page";
+import CertificationsPage from "./certifications/page";
 
 export default function Page() {
   return (
@@ -18,9 +19,9 @@ export default function Page() {
       <div id="ProjectsPage" className="pt-28">
         <ProjectsPage />
       </div>
-      {/* <div id="ContactPage" className="pt-28">
-        <ContactPage />
-      </div> */}
+      <div id="ProjectsPage" className="pt-28">
+        <CertificationsPage />
+      </div>
     </main>
   );
 }

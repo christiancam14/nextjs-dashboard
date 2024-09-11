@@ -1,6 +1,7 @@
 import { Tooltip } from "@nextui-org/react";
 import { FaAngular, FaReact } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
+import { RiNextjsLine } from "react-icons/ri";
 import {
   SiAdobephotoshop,
   SiBootstrap,
@@ -36,6 +37,11 @@ const stackFront: stack[] = [
   {
     name: "React / React Native",
     element: FaReact,
+    level: "Beg",
+  },
+  {
+    name: "NextJs",
+    element: RiNextjsLine,
     level: "Beg",
   },
   {
