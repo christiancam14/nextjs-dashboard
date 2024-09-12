@@ -1,4 +1,4 @@
-import AccordionCourses from "../ui/dashboard/accordionCourses";
+import AccordionCourses from "@/app/ui/dashboard/accordionCourses";
 
 export default function CertificationsPage() {
   return (

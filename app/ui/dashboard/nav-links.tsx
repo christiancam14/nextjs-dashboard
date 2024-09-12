@@ -4,18 +4,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import Reveal from "./reveal";
+import { useTranslations } from "next-intl";
 
 const links = [
-  { name: "Home", href: "#Home" },
-  { name: "About", href: "#AboutPage" },
-  { name: "Skills", href: "#SkillsPage" },
-  { name: "Projects", href: "#ProjectsPage" },
-  { name: "Contact", href: "#ContactPage" },
+  { name: "home", href: "#Home" },
+  { name: "about", href: "#AboutPage" },
+  { name: "skills", href: "#SkillsPage" },
+  { name: "projects", href: "#ProjectsPage" },
+  { name: "contact", href: "#ContactPage" },
 ];
 
 export default function NavLinks() {
   const pathname = usePathname();
-
+  const t = useTranslations("Header");
   return (
     <>
       {links.map((link) => {
@@ -30,7 +31,7 @@ export default function NavLinks() {
                 }
               )}
             >
-              {link.name}
+              {t(link.name)}
             </Link>
           </Reveal>
         );

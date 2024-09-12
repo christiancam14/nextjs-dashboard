@@ -21,6 +21,7 @@ import {
 } from "react-icons/si";
 import Reveal from "./reveal";
 import RevealItems from "./reveal-items";
+import { useTranslations } from "next-intl";
 
 interface stack {
   name: string;
@@ -128,6 +129,7 @@ const stackUtilities: stack[] = [
 ];
 
 export const StackIcons = () => {
+  const t = useTranslations("SkillsPage");
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-col items-center gap-3">
@@ -174,7 +176,7 @@ export const StackIcons = () => {
       </div>
       <div className="flex flex-col items-center gap-3  mt-2">
         <Reveal>
-          <h3 className="text-xl text-gray-800">Utilities</h3>
+          <h3 className="text-xl text-gray-800">{t("utilities")}</h3>
         </Reveal>
         <div className="flex flex-wrap justify-center gap-8 self-center">
           {stackUtilities.map((item, index) => (

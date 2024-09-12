@@ -5,10 +5,14 @@ import { Button } from "@nextui-org/react";
 import { MdContacts } from "react-icons/md";
 
 import { FaRegFilePdf } from "react-icons/fa";
-import Reveal from "../ui/dashboard/reveal";
-import { inter } from "../ui/fonts";
+// import Reveal from "../ui/dashboard/reveal";
+import { inter } from "@/app//ui/fonts";
+import Reveal from "@/app/ui/dashboard/reveal";
+import { useTranslations } from "next-intl";
 
 export default function HomePage() {
+  const t = useTranslations("HomePage");
+
   return (
     <section className="w-screen pt-20 md:pt-32">
       <div className="flex flex-col max-w-screen-xl mx-auto px-6 md:px-12">
@@ -22,17 +26,16 @@ export default function HomePage() {
               </>
             </Reveal>
             <Reveal>
-              <p className="text-2xl font-bold">Frontend developer</p>
+              <p className="text-2xl font-bold">{t("frontend")}</p>
             </Reveal>
             <Reveal>
               <p className="text-lg max-w-96 mx-auto md:mr-0 md:ml-auto">
-                2+ Years of Experience
+                {t("yearsExperience")}
               </p>
             </Reveal>
             <Reveal>
               <p className="text-medium max-w-96 mx-auto md:mr-0 md:ml-auto">
-                Passionate about creating engaging user interfaces and transform
-                ideas into responsive, high-performance websites.
+                {t("description")}
               </p>
             </Reveal>
             <div className="flex mt-4 md:mt-0 md:justify-end gap-4 md:gap-4">
@@ -52,7 +55,7 @@ export default function HomePage() {
                 <a href="#ContactPage" className="w-fit mx-auto md:mx-0">
                   <Button className="rounded-md bg-slate-600 hover:bg-slate-800 mt-0 md:mt-2 text-white">
                     <MdContacts />
-                    Contact
+                    {t("contact")}
                   </Button>
                 </a>
               </Reveal>

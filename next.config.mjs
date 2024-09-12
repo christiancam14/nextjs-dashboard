@@ -1,16 +1,11 @@
-/** @type {import('next').NextConfig} */
+import createNextIntlPlugin from "next-intl/plugin";
 
+// Configuración del plugin NextIntl
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  experimental: {
-    ppr: "incremental",
-  },
-  /*
-  i18n: {
-    locales: ["en", "es"],
-    defaultLocale: "en",
-  },
-  */
+  reactStrictMode: true, // Cualquier otra configuración de Next.js
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

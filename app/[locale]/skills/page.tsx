@@ -1,11 +1,13 @@
 "use client";
 
-import Reveal from "../ui/dashboard/reveal";
-import { principalFont } from "../ui/fonts";
-import StackIcons from "../ui/dashboard/stackIcons";
+import Reveal from "@/app//ui/dashboard/reveal";
+import { principalFont } from "@/app//ui/fonts";
+import StackIcons from "@/app//ui/dashboard/stackIcons";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function SkillsPage() {
+  const t = useTranslations("SkillsPage");
   return (
     <>
       <motion.div
@@ -22,7 +24,7 @@ export default function SkillsPage() {
               <h3
                 className={`${principalFont.className} text-2xl mb-4 text-center`}
               >
-                Skills
+                {t("title")}
               </h3>
             </Reveal>
             <div className="mt-4 flex grow flex-col gap-4 md:flex-row justify-center">
@@ -31,7 +33,7 @@ export default function SkillsPage() {
                   <p
                     className={`${principalFont.className} text-2xl text-gray-800 md:text-3xl md:leading-normal`}
                   >
-                    <strong>Stack technologies</strong>
+                    <strong>{t("subtitle")}</strong>
                   </p>
                 </Reveal>
                 <div className="flex flex-wrap max-w-96 justify-center self-center">

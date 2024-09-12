@@ -11,37 +11,38 @@ import {
   getKeyValue,
 } from "@nextui-org/react";
 import Reveal from "./reveal";
+import { useTranslations } from "next-intl";
 
 const rows = [
   {
     key: "1",
     platform: "Udemy",
     course: "Advanced Angular",
-    date: "09/2024",
+    date: "2024",
   },
   {
     key: "2",
     platform: "Udemy",
     course: "React Native: Native applications for IOS and Android",
-    date: "08/2024",
+    date: "2024",
   },
   {
     key: "3",
     platform: "Udemy",
     course: "React: From zero to expert (Hooks and MERN)",
-    date: "06/2024",
+    date: "2024",
   },
   {
     key: "4",
     platform: "Udemy",
     course: "Nest: Scalable backend development with Node",
-    date: "05/2024",
+    date: "2024",
   },
   {
     key: "5",
     platform: "Udemy",
     course: "Databases with MySQL + ChatGPT and MongoDB",
-    date: "04/2024",
+    date: "2024",
   },
 ];
 
@@ -61,13 +62,15 @@ const columns = [
 ];
 
 export default function AccordionCourses() {
+  const t = useTranslations("CertificationsPage");
+
   return (
     <Accordion disabledKeys={["2"]}>
       <AccordionItem
         key="1"
         aria-label="Certifications"
-        subtitle={<span className="text-sky-100">Press to expand</span>}
-        title={<span className="text-sky-100">Certifications</span>}
+        subtitle={<span className="text-sky-100">{t("subtitle")}</span>}
+        title={<span className="text-sky-100">{t("title")}</span>}
         className="text-sky-100"
       >
         <Table aria-label="Table with courses">

@@ -1,0 +1,42 @@
+{
+    "Header": {
+        "portfolio": "Portfolio",
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "HomePage": {
+        "frontend": "Frontend developer",
+        "yearsExperience": "2+ Years of Experience",
+        "description": "Passionate about creating engaging user interfaces and transform ideas into responsive, high-performance websites.",
+        "contact": "Contact"
+    },
+    "AboutPage": {
+        "title": "About me",
+        "description": "With 2+ years of expertise in frontend development and UI/UX design, I specialize in building seamless user experiences. Proficient in Angular, I develop dynamic interfaces, integrate microservices, and implement secure authentication. I've developed custom WordPress plugins using PHP and JavaScript, and built scalable RESTful APIs with NestJs and TypeOrm. Experienced in Git for version control on GitHub and GitLab, I excel in Scrum environments, demonstrating leadership, teamwork, and project management skills.",
+        "contact": "Contact"
+    },
+    "SkillsPage": {
+        "title": "Skills",
+        "subtitle": "Stack technologies",
+        "utilities": "Utilities"
+    },
+    "ProjectsPage": {
+        "title": "Projects",
+        "repeat": "Repeat",
+        "prev": "Prev project",
+        "seeProject": "See project",
+        "next": "Next project",
+        "random": "Random project"
+    },
+    "CertificationsPage": {
+        "title": "Certifications",
+        "subtitle": "Press to expand",
+        "btnMoreCertifications": "More certifications"
+    },
+    "": {
+        
+    }
+}

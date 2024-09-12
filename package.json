@@ -7,17 +7,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.4",
+    "@heroicons/react": "^2.1.5",
     "@nextui-org/dropdown": "^2.1.29",
     "@nextui-org/react": "^2.4.6",
-    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/forms": "^0.5.9",
     "@vercel/postgres": "^0.8.0",
     "add": "^2.0.6",
     "autoprefixer": "10.4.19",
     "bcrypt": "^5.1.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.5.4",
-    "i18next": "^23.15.0",
+    "i18next": "^23.15.1",
     "next": "15.0.0-canary.56",
     "next-auth": "5.0.0-beta.20",
     "next-i18next": "^15.3.1",
@@ -30,7 +30,7 @@
     "react-icons": "^5.3.0",
     "tailwindcss": "3.4.4",
     "typescript": "5.5.2",
-    "use-debounce": "^10.0.1",
+    "use-debounce": "^10.0.3",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "@types/node": "20.14.8",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "eslint": "^8",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.8"
   },
   "engines": {

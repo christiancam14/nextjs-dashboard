@@ -2,7 +2,7 @@ import { Tooltip } from "@nextui-org/react";
 import { Metadata } from "next";
 import { IconType } from "react-icons/lib";
 import { SiGmail, SiLinkedin, SiTelegram, SiWhatsapp } from "react-icons/si";
-import Reveal from "../ui/dashboard/reveal";
+import Reveal from "@/app/ui/dashboard/reveal";
 import clsx from "clsx";
 
 export const metadata: Metadata = {

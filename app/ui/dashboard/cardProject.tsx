@@ -10,6 +10,7 @@ import { Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Reveal from "./reveal";
 import HeartBeat from "./heartBeat";
+import { useTranslations } from "next-intl";
 
 interface Project {
   id: number;
@@ -70,6 +71,7 @@ const projects: Project[] = [
 ];
 
 export function CardProject() {
+  const t = useTranslations("ProjectsPage");
   const [currentProjectIndex, setCurrentProjectIndex] = useState(1);
   const [direction, setDirection] = useState("right");
 
@@ -165,7 +167,7 @@ export function CardProject() {
         </div>
 
         <div className="flex items-center justify-between mt-4 px-4">
-          <Tooltip content="Repeat">
+          <Tooltip content={t("repeat")}>
             <button
               aria-label="shuffle"
               className="text-gray-500 hover:text-gray-900"
@@ -174,7 +176,7 @@ export function CardProject() {
             </button>
           </Tooltip>
 
-          <Tooltip content="Prev project">
+          <Tooltip content={t("prev")}>
             <button
               aria-label="previous"
               className="text-gray-500 hover:text-gray-900"
@@ -184,7 +186,7 @@ export function CardProject() {
             </button>
           </Tooltip>
 
-          <Tooltip content="See project">
+          <Tooltip content={t("seeProject")}>
             <a
               href="https://github.com/christiancam14/nextjs-dashboard"
               target="_blank"
@@ -198,7 +200,7 @@ export function CardProject() {
             </a>
           </Tooltip>
 
-          <Tooltip content="Next project">
+          <Tooltip content={t("next")}>
             <button
               aria-label="next"
               className="text-gray-500 hover:text-gray-900"
@@ -208,7 +210,7 @@ export function CardProject() {
             </button>
           </Tooltip>
 
-          <Tooltip content="Random project">
+          <Tooltip content={t("random")}>
             <button
               aria-label="repeat"
               className="text-gray-500 hover:text-gray-900"
