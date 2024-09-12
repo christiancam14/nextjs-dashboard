@@ -4,6 +4,7 @@ import { IconType } from "react-icons/lib";
 import { SiGmail, SiLinkedin, SiTelegram, SiWhatsapp } from "react-icons/si";
 import Reveal from "@/app/ui/dashboard/reveal";
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -53,12 +54,14 @@ interface Props {
 }
 
 export default function ContactPage({ isDark = true }: Props) {
+  const t = useTranslations("HomePage");
+
   return (
     <section className="w-auto md:w-screen pt-24">
       <div className="flex flex-col max-w-screen-xl mx-auto px-6 md:px-12">
         <div className="text-center flex flex-col items-center">
           <Reveal>
-            <h3 className="text-2xl mb-4 font-bold">Contact</h3>
+            <h3 className="text-2xl mb-4 font-bold">{t("contact")}</h3>
           </Reveal>
           <div className="flex flex-col md:flex-row flex-wrap justify-center gap-y-8 mt-4 self-center">
             {stackContact.map((item, index) => (

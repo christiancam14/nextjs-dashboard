@@ -40,7 +40,7 @@ export default async function RootLayout({
         <LocaleProvider>
           <NextIntlClientProvider messages={messages} locale={locale}>
             <div className="flex flex-col md:overflow-hidden mx-auto scroll-smoth">
-              <div className="w-full flex-none z-10 px-6 md:px-12">
+              <div className="w-full flex-none z-50 px-6 md:px-12">
                 <Progressbar />
                 <Header />
               </div>

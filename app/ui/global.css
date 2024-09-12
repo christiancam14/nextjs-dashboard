@@ -35,6 +35,12 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #1f2937; /* Color del texto seleccionado */
 }
 
+.icon-table {
+  color: rgb(31 41 55);
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
 .icon-stack {
   color: rgb(31 41 55);
   width: 24px !important;

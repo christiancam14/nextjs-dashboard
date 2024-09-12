@@ -4,11 +4,10 @@ import Image from "next/image";
 import { Button } from "@nextui-org/react";
 import { MdContacts } from "react-icons/md";
 
-import { FaRegFilePdf } from "react-icons/fa";
-// import Reveal from "../ui/dashboard/reveal";
 import { inter } from "@/app//ui/fonts";
 import Reveal from "@/app/ui/dashboard/reveal";
 import { useTranslations } from "next-intl";
+import BtnCurriculum from "@/app/ui/dashboard/btnCurriculum";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -40,16 +39,7 @@ export default function HomePage() {
             </Reveal>
             <div className="flex mt-4 md:mt-0 md:justify-end gap-4 md:gap-4">
               <Reveal>
-                <a
-                  href="/pdf/EN_ChristianCamachoGalvis_CV.pdf"
-                  className="w-fit mx-auto md:mx-0"
-                  download={true}
-                >
-                  <Button className="rounded-md bg-slate-600 hover:bg-slate-800 mt-0 md:mt-2 text-white">
-                    <FaRegFilePdf />
-                    CV
-                  </Button>
-                </a>
+                <BtnCurriculum />
               </Reveal>
               <Reveal>
                 <a href="#ContactPage" className="w-fit mx-auto md:mx-0">

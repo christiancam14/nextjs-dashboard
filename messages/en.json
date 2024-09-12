@@ -18,6 +18,28 @@
         "description": "With 2+ years of expertise in frontend development and UI/UX design, I specialize in building seamless user experiences. Proficient in Angular, I develop dynamic interfaces, integrate microservices, and implement secure authentication. I've developed custom WordPress plugins using PHP and JavaScript, and built scalable RESTful APIs with NestJs and TypeOrm. Experienced in Git for version control on GitHub and GitLab, I excel in Scrum environments, demonstrating leadership, teamwork, and project management skills.",
         "contact": "Contact"
     },
+    "Timeline": {
+        "data1": {
+            "title": "Freelancer",
+            "time": "2024 - present",
+            "description": "Develops content updates and improvements for company websites built on WordPress, implementing custom adjustments, optimizing SEO, and enhancing site functionality and security."
+        },
+        "data2": {
+            "title": "Hexa Solutions S.A.S.",
+            "time": "2022 - 2024",
+            "description": "Led web portal development in WordPress, creating custom PHP plugins for content management and SEO improvements. Revamped an Angular-based payment gateway, reducing abandonment rates and increasing digital transactions. Developed web applications, including a pet tracking manager and a business data collection platform."
+        },
+        "data3": {
+            "title": "Hyperlink S.A.S",
+            "time": "2021 - 2022",
+            "description": "Designed dynamic, client-specific web templates using HTML, jQuery, and Bootstrap, optimizing for fast load times and seamless user experiences."
+        },
+        "data4": {
+            "title": "Roojotech S.A.S",
+            "time": "2021",
+            "description": "Developed a custom administrative platform using Microsoft Power Platform, streamlining operations and automating processes to enhance productivity."
+        }
+    },
     "SkillsPage": {
         "title": "Skills",
         "subtitle": "Stack technologies",
@@ -34,9 +56,33 @@
     "CertificationsPage": {
         "title": "Certifications",
         "subtitle": "Press to expand",
-        "btnMoreCertifications": "More certifications"
-    },
-    "": {
-        
+        "more_certifications": "More certifications",
+        "course": "Name",
+        "date": "Date",
+        "data1": {
+            "platform": "Udemy",
+            "course": "Advanced Angular",
+            "date": "2024"
+        },
+        "data2": {
+            "platform": "Udemy",
+            "course": "React Native: Native applications for IOS and Android",
+            "date": "2024"
+        },
+        "data3": {
+            "platform": "Udemy",
+            "course": "React: From zero to expert (Hooks and MERN)",
+            "date": "2024"
+        },
+        "data4": {
+            "platform": "Udemy",
+            "course": "Nest: Scalable backend development with Node",
+            "date": "2024"
+        },
+        "data5": {
+            "platform": "Udemy",
+            "course": "Databases with MySQL + ChatGPT and MongoDB",
+            "date": "2024"
+        }
     }
 }

@@ -18,6 +18,28 @@
         "description": "Con más de 2 años de experiencia en desarrollo frontend y diseño UI/UX, me especializo en crear experiencias de usuario fluidas. Soy competente en Angular, desarrollo interfaces dinámicas, integro microservicios y implemento autenticación segura. He desarrollado plugins personalizados de WordPress usando PHP y JavaScript, y construí APIs RESTful escalables con NestJs y TypeOrm. Con experiencia en Git para control de versiones en GitHub y GitLab, sobresalgo en entornos Scrum, demostrando habilidades de liderazgo, trabajo en equipo y gestión de proyectos.",
         "contact": "Contacto"
     },
+    "Timeline": {
+        "data1": {
+            "title": "Freelancer",
+            "time": "2024 - presente",
+            "description": "Desarrollo actualizaciones de contenido y mejoras para sitios web de empresas en WordPress, implementando ajustes personalizados, optimizando SEO y mejorando la funcionalidad y seguridad del sitio."
+        },
+        "data2": {
+            "title": "Hexa Solutions S.A.S.",
+            "time": "2022 - 2024",
+            "description": "Lidero el desarrollo de un portal web en WordPress, creando plugins personalizados en PHP para la gestión de contenido y mejoras en SEO. Renovó una pasarela de pago basada en Angular, reduciendo las tasas de abandono e incrementando las transacciones digitales. Desarrolló aplicaciones web, incluyendo un gestor de seguimiento de mascotas y una plataforma de recolección de datos empresariales."
+        },
+        "data3": {
+            "title": "Hyperlink S.A.S",
+            "time": "2021 - 2022",
+            "description": "Diseño plantillas web dinámicas y específicas para clientes utilizando HTML, jQuery y Bootstrap, optimizando tiempos de carga rápidos y una experiencia de usuario fluida."
+        },
+        "data4": {
+            "title": "Roojotech S.A.S",
+            "time": "2021",
+            "description": "Desarrolló una plataforma administrativa personalizada utilizando Microsoft Power Platform, optimizando operaciones y automatizando procesos para mejorar la productividad."
+        }
+    },
     "SkillsPage": {
         "title": "Destrezas",
         "subtitle": "Tecnologías del stack",
@@ -29,11 +51,47 @@
         "prev": "Proyecto anterior",
         "seeProject": "Ver proyecto",
         "next": "Siguiente proyecto",
-        "random": "Proyecto aleatorio"
+        "random": "Proyecto aleatorio",
+        "frontend": {
+            "project1": {
+                "title": "Proyecto 1",
+                "description": "Descripción del proyecto 1",
+                "image": "https://example.com/image1.jpg",
+                "url": "https://example.com/project1",
+                "github": "https://github.com/user/project1"
+            }
+        }
     },
     "CertificationsPage": {
         "title": "Certificaciones",
         "subtitle": "Presiona para expandir",
-        "btnMoreCertifications": "Más certificaciones"
+        "more_certifications": "Más certificaciones",
+        "course": "Nombre",
+        "date": "Fecha",
+        "data1": {
+            "platform": "Udemy",
+            "course": "Advanced Angular",
+            "date": "2024"
+        },
+        "data2": {
+            "platform": "Udemy",
+            "course": "React Native: Aplicaciones nativas para IOS and Android",
+            "date": "2024"
+        },
+        "data3": {
+            "platform": "Udemy",
+            "course": "React: De cero a experto (Hooks y MERN)",
+            "date": "2024"
+        },
+        "data4": {
+            "platform": "Udemy",
+            "course": "Nest: Desarrollo escalable de backend con Node",
+            "date": "2024"
+        },
+        "data5": {
+            "platform": "Udemy",
+            "course": "Bases de datos MySQL + ChatGPT y MongoDB",
+            "date": "2024"
+        }
     }
 }
