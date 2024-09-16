@@ -23,7 +23,7 @@ export default function Header() {
               &lt;{t("portfolio")} / &gt;
             </Link>
           </Reveal>
-          <span>
+          <span className="self-center">
             <LanguageSwitcher />
           </span>
         </div>

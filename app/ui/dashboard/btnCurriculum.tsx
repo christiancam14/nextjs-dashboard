@@ -20,8 +20,8 @@ export default function BtnCurriculum() {
     <a
       href={`${baseUrl}${
         isEnglish
-          ? "EN_ChristianCamachoGalvis_CV.pdf"
-          : "ES_ChristianCamachoGalvis_CV.pdf"
+          ? "EN_CV_ChristianCamachoGalvis.pdf"
+          : "ES_CV_ChristianCamachoGalvis.pdf"
       }`}
       className="w-fit mx-auto md:mx-0"
       download
@@ -33,5 +33,3 @@ export default function BtnCurriculum() {
     </a>
   );
 }
-
-// https://christiancamacho.vercel.app/pdf/EN_ChristianCamachoGalvis_CV.pdf

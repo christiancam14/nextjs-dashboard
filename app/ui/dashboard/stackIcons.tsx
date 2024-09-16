@@ -14,6 +14,7 @@ import {
   SiNestjs,
   SiPhp,
   SiPostgresql,
+  SiPostman,
   SiPrimeng,
   SiTailwindcss,
   SiTypescript,
@@ -124,6 +125,11 @@ const stackUtilities: stack[] = [
   {
     name: "Photoshop",
     element: SiAdobephotoshop,
+    level: "Adv",
+  },
+  {
+    name: "Postman",
+    element: SiPostman,
     level: "Adv",
   },
 ];
