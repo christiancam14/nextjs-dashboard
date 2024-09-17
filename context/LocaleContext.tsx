@@ -23,7 +23,6 @@ export const LocaleProvider: React.FC<{ children: ReactNode }> = ({
 
 export const useLocale = () => {
   const context = useContext(LocaleContext);
-  console.log(context);
   if (context === undefined) {
     throw new Error("useLocale must be used within a LocaleProvider");
   }

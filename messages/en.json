@@ -9,35 +9,35 @@
     },
     "HomePage": {
         "frontend": "Frontend developer",
-        "yearsExperience": "2+ Years of Experience",
+        "yearsExperience": "4 Years of Experience",
         "description": "Passionate about creating engaging user interfaces and transform ideas into responsive, high-performance websites.",
         "contact": "Contact"
     },
     "AboutPage": {
         "title": "About me",
-        "description": "With 2+ years of expertise in frontend development and UI/UX design, I specialize in building seamless user experiences. Proficient in Angular, I develop dynamic interfaces, integrate microservices, and implement secure authentication. I've developed custom WordPress plugins using PHP and JavaScript, and built scalable RESTful APIs with NestJs and TypeOrm. Experienced in Git for version control on GitHub and GitLab, I excel in Scrum environments, demonstrating leadership, teamwork, and project management skills.",
+        "description": "With 4 years of expertise in frontend development and UI/UX design, I specialize in building seamless user experiences. Proficient in Angular, I develop dynamic interfaces, integrate microservices, and implement secure authentication. I've developed custom WordPress plugins using PHP and JavaScript, and built scalable RESTful APIs with NestJs and TypeOrm. Experienced in Git for version control on GitHub and GitLab, I excel in Scrum environments, demonstrating leadership, teamwork, and project management skills.",
         "contact": "Contact"
     },
     "Timeline": {
         "data1": {
             "title": "Freelancer",
             "time": "2024 - present",
-            "description": "Develops content updates and improvements for company websites built on WordPress, implementing custom adjustments, optimizing SEO, and enhancing site functionality and security."
+            "description": "I develop custom user interface solutions for various companies. A footwear client increased their sales by 15% after launching their SEO-optimized WordPress site. I also handle updates and improvements on previous projects, focusing on interface aesthetics and functionality."
         },
         "data2": {
             "title": "Hexa Solutions S.A.S.",
             "time": "2022 - 2024",
-            "description": "Led web portal development in WordPress, creating custom PHP plugins for content management and SEO improvements. Revamped an Angular-based payment gateway, reducing abandonment rates and increasing digital transactions. Developed web applications, including a pet tracking manager and a business data collection platform."
+            "description": "I led the development of a WordPress portal, creating custom plugins and optimizing SEO to rank for key terms like 'digital credit'. I redesigned an Angular-based payment gateway, reducing abandonment rates from 35% to 20%, and collaborated on web applications using Angular and NestJs."
         },
         "data3": {
             "title": "Hyperlink S.A.S",
             "time": "2021 - 2022",
-            "description": "Designed dynamic, client-specific web templates using HTML, jQuery, and Bootstrap, optimizing for fast load times and seamless user experiences."
+            "description": "I designed a reusable template base in Bootstrap for headers, forms, and sidebars, customizable to client requirements, enabling the creation of adaptable portals with optimized load times."
         },
         "data4": {
             "title": "Roojotech S.A.S",
             "time": "2021",
-            "description": "Developed a custom administrative platform using Microsoft Power Platform, streamlining operations and automating processes to enhance productivity."
+            "description": "I developed an administrative platform using Microsoft Power Platform, improving the management of information previously handled in Excel, which increased the company’s operational efficiency."
         }
     },
     "SkillsPage": {

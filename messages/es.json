@@ -9,35 +9,35 @@
     },
     "HomePage": {
         "frontend": "Desarrollador frontend",
-        "yearsExperience": "Más de 2 años de experiencia",
+        "yearsExperience": "4 años de experiencia",
         "description": "Apasionado por crear interfaces de usuario atractivas y transformar ideas en sitios web responsivos y de alto rendimiento.",
         "contact": "Contacto"
     },
     "AboutPage": {
         "title": "Sobre mí",
-        "description": "Con más de 2 años de experiencia en desarrollo frontend y diseño UI/UX, me especializo en crear experiencias de usuario fluidas. Soy competente en Angular, desarrollo interfaces dinámicas, integro microservicios y implemento autenticación segura. He desarrollado plugins personalizados de WordPress usando PHP y JavaScript, y construí APIs RESTful escalables con NestJs y TypeOrm. Con experiencia en Git para control de versiones en GitHub y GitLab, sobresalgo en entornos Scrum, demostrando habilidades de liderazgo, trabajo en equipo y gestión de proyectos.",
+        "description": "Con 4 años de experiencia en desarrollo frontend y diseño UI/UX, me especializo en crear experiencias de usuario fluidas. Soy competente en Angular, desarrollo interfaces dinámicas, integro microservicios y implemento autenticación segura. He desarrollado plugins personalizados de WordPress usando PHP y JavaScript, y construí APIs RESTful escalables con NestJs y TypeOrm. Con experiencia en Git para control de versiones en GitHub y GitLab, sobresalgo en entornos Scrum, demostrando habilidades de liderazgo, trabajo en equipo y gestión de proyectos.",
         "contact": "Contacto"
     },
     "Timeline": {
         "data1": {
             "title": "Freelancer",
             "time": "2024 - presente",
-            "description": "Desarrollo actualizaciones de contenido y mejoras para sitios web de empresas en WordPress, implementando ajustes personalizados, optimizando SEO y mejorando la funcionalidad y seguridad del sitio."
+            "description": "Desarrollo soluciones personalizadas de interfaz de usuario para diversas empresas. Un cliente del sector calzado aumentó sus ventas en un 15% tras el lanzamiento de su sitio WordPress optimizado para SEO. También realizo actualizaciones y mejoras en proyectos previos, enfocándome en la estética y funcionalidad de las interfaces."
         },
         "data2": {
             "title": "Hexa Solutions S.A.S.",
             "time": "2022 - 2024",
-            "description": "Lidero el desarrollo de un portal web en WordPress, creando plugins personalizados en PHP para la gestión de contenido y mejoras en SEO. Renovó una pasarela de pago basada en Angular, reduciendo las tasas de abandono e incrementando las transacciones digitales. Desarrolló aplicaciones web, incluyendo un gestor de seguimiento de mascotas y una plataforma de recolección de datos empresariales."
+            "description": "Lideré el desarrollo de un portal en WordPress, creando plugins personalizados y optimizando el SEO para posicionar el sitio en palabras clave como 'crédito digita'. Reestructuré una pasarela de pagos en Angular, reduciendo la deserción de pagos del 35% al 20%, y colaboré en el desarrollo de aplicaciones web con Angular y NestJs."
         },
         "data3": {
             "title": "Hyperlink S.A.S",
             "time": "2021 - 2022",
-            "description": "Diseño plantillas web dinámicas y específicas para clientes utilizando HTML, jQuery y Bootstrap, optimizando tiempos de carga rápidos y una experiencia de usuario fluida."
+            "description": "Diseñé una base de plantillas reutilizables en Bootstrap para headers, formularios y sidebars, personalizables según los requerimientos del cliente, lo que permitió crear portales adaptables con tiempos de carga optimizados."
         },
         "data4": {
             "title": "Roojotech S.A.S",
             "time": "2021",
-            "description": "Desarrolló una plataforma administrativa personalizada utilizando Microsoft Power Platform, optimizando operaciones y automatizando procesos para mejorar la productividad."
+            "description": "Desarrollé una plataforma administrativa usando Microsoft Power Platform, mejorando la gestión de información previamente manejada en Excel, lo que incrementó la eficiencia operativa de la empresa."
         }
     },
     "SkillsPage": {
