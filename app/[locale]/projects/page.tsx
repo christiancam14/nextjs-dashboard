@@ -16,7 +16,8 @@ const frontProjects: Project[] = [
     title: "Psycho Project",
     url: "https://github.com/christiancam14/psycho-project-uis",
     stack: "Angular, Typescript, Bootstrap",
-    time2: 4,
+    description: "front_1",
+    time2: 8,
   },
   {
     id: 2,
@@ -24,7 +25,8 @@ const frontProjects: Project[] = [
     title: "MoviesApp",
     url: "https://github.com/christiancam14/06-MoviesApp/tree/main",
     stack: "React Native, Typescript, Jest, Css",
-    time2: 6,
+    description: "front_2",
+    time2: 9,
   },
   {
     id: 3,
@@ -32,7 +34,8 @@ const frontProjects: Project[] = [
     title: "Gif Expert",
     url: "https://github.com/christiancam14/gifExpertApp",
     stack: "React, Vite, Redux, Typescript, Jest, css",
-    time2: 5,
+    description: "front_3",
+    time2: 7,
   },
   {
     id: 4,
@@ -40,7 +43,8 @@ const frontProjects: Project[] = [
     title: "MapsApp",
     url: "https://github.com/christiancam14/MapsApp",
     stack: "React Native, Redux, Typescript, Jest, Css",
-    time2: 3,
+    description: "front_4",
+    time2: 11,
   },
   {
     id: 5,
@@ -48,7 +52,8 @@ const frontProjects: Project[] = [
     title: "MyPortfolio",
     url: "https://github.com/christiancam14/nextjs-dashboard",
     stack: "Next.js, Typescript, TailwindCSS, Framer",
-    time2: 4,
+    description: "front_5",
+    time2: 12,
   },
   {
     id: 6,
@@ -56,7 +61,17 @@ const frontProjects: Project[] = [
     title: "React Template",
     url: "https://github.com/christiancam14/react-adv",
     stack: "React, Typescript, ReactRouterDom, Jest",
-    time2: 6,
+    description: "front_6",
+    time2: 9,
+  },
+  {
+    id: 7,
+    img: "/img/img4.jpg",
+    title: "Credit simulator",
+    url: "https://github.com/christiancam14/MapsApp",
+    stack: "React Native, Redux, Typescript, Css",
+    description: "front_7",
+    time2: 11,
   },
 ];
 
@@ -67,7 +82,8 @@ const backProjects: Project[] = [
     title: "Backend template",
     url: "https://github.com/christiancam14/linea-base-back",
     stack: "Node.Js, NestJs, Typescript, MySql, Jwt",
-    time2: 3,
+    description: "back_1",
+    time2: 9,
   },
   {
     id: 2,
@@ -75,7 +91,8 @@ const backProjects: Project[] = [
     title: "Virtual Shop",
     url: "https://github.com/christiancam14/teslo-shop",
     stack: "Node.Js, NestJs, Typescript, MongoDb, WebSocket, Jwt",
-    time2: 4,
+    description: "back_2",
+    time2: 7,
   },
   {
     id: 3,
@@ -83,7 +100,8 @@ const backProjects: Project[] = [
     title: "Psycho Project",
     url: "https://github.com/christiancam14/backend-psycho",
     stack: "Node.Js, NestJs, Typescript, MongoDb, Jwt, Prisma",
-    time2: 6,
+    description: "back_3",
+    time2: 8,
   },
   {
     id: 4,
@@ -91,7 +109,8 @@ const backProjects: Project[] = [
     title: "Admin pro",
     url: "https://github.com/christiancam14/adminpro-backend",
     stack: "Node.Js, Express, Typescript, MongoDb, Jwt",
-    time2: 5,
+    description: "back_4",
+    time2: 9,
   },
 ];
 

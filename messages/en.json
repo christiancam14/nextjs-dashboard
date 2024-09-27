@@ -47,14 +47,30 @@
     },
     "ProjectsPage": {
         "title": "Projects",
+        "projects": {
+            "projects": {
+                "front_1": "Platform for UIS students with authentication and role management. Efficiently organizes psychological appointments. Developed in Angular with a focus on security and usability.",
+                "front_2": "App to search for movies, providing details like cast, characters, summaries, and trailers. Enhances user experience with quick access to relevant information.",
+                "front_3": "React app for searching and displaying GIFs, featuring advanced search options. Designed for fast and smooth image rendering. Fully optimized for user experience.",
+                "front_4": "Mobile app that consumes services to generate routes and track real-time positioning. Ideal for route tracking, enhancing efficiency in time and resource management.",
+                "front_5": "Source code for my personal portfolio, with detailed project documentation. Includes all steps and technologies used, showcasing my technical expertise.",
+                "front_6": "Base template for React projects, featuring pre-configured routing, validations, and authentication. Perfect for quickly starting scalable projects with a solid architecture.",
+                "front_7": "Mobile app that simulates loans, generates amortization tables, schedules notifications, and converts interest rates. A comprehensive tool for managing loans and financial simulations.",
+                "back_1": "Backend in NestJs with TypeScript, JWT, authentication, password encryption, TypeOrm integration, and MySQL database. Perfect for starting projects with a robust and secure architecture.",
+                "back_2": "Backend developed in NestJs with CRUD for products, authentication, TypeOrm integration, and WebSocket. A complete solution for store management with real-time updates.",
+                "back_3": "Backend for a psychological appointment platform, built in NestJs with authentication, MongoDB, and TypeOrm. Efficient user management and secure database communication.",
+                "back_4": "Backend built in Express and TypeScript, using MongoDB and JWT for an admin panel. Provides secure authentication and efficient data management for control panel projects."
+            }
+        },
         "inst_prev": "View previous project",
-        "inst_play": "View project code",
+        "inst_play": "Detener proyecto",
         "inst_next": "View next project",
         "repeat": "Repeat",
         "prev": "Prev project",
         "seeProject": "See project",
         "next": "Next project",
-        "random": "Random project"
+        "random": "Random project",
+        "play_pause": "Play / Pause"
     },
     "CertificationsPage": {
         "title": "Certifications",

@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
-import { FaPause, FaRegHeart } from "react-icons/fa";
+import { FaPause, FaPlay, FaRegHeart } from "react-icons/fa";
 import { LiaRandomSolid } from "react-icons/lia";
 import { PiRepeatOnce } from "react-icons/pi";
 import { GiNextButton, GiPreviousButton } from "react-icons/gi";
@@ -12,12 +11,17 @@ import { IconButton } from "./iconButton";
 import { ProgressBarLine } from "./progressBarLine";
 import { useProjectNavigator } from "@/hooks/useProjectNavigator";
 import Reveal from "./reveal";
+import { ProjectText } from "./projectText";
+import { Tooltip } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 interface Props {
   projects: Project[];
 }
 
 export function CardProject({ projects }: Props) {
+  const t = useTranslations("ProjectsPage");
+
   const {
     currentProjectIndex,
     progress,
@@ -30,6 +34,8 @@ export function CardProject({ projects }: Props) {
     setIsRepeating,
     setIsRandom,
     toggleLike,
+    isPaused,
+    toggleProgress,
   } = useProjectNavigator(projects);
 
   const currentProject = projects[currentProjectIndex];
@@ -49,21 +55,31 @@ export function CardProject({ projects }: Props) {
         transition={{ duration: 0.5 }}
         className="img-card-project"
       >
-        <Image
-          src={currentProject.img}
-          alt="Project Image"
-          width={300}
-          height={300}
-          className="w-full object-cover h-auto rounded-lg aspect-square img-card-project"
-        />
+        <div
+          style={{ width: 300, height: 300, overflow: "hidden" }}
+          className="cont-img-project bg-gray-600 rounded-lg aspect-square flex justify-center align-middle items-center"
+        >
+          <ProjectText
+            text={t(`projects.${currentProject.description}`)}
+            isPaused={isPaused}
+          />
+        </div>
       </motion.div>
 
       <div className="py-4">
         <div className="flex flex-col items-center justify-between">
           <div className="flex justify-between w-full">
-            <h2 className="text-lg font-semibold text-gray-900">
-              {currentProject.title}
-            </h2>
+            <div className="relative">
+              <Tooltip content={t("seeProject")}>
+                <a
+                  href={currentProject.url}
+                  target="_blank"
+                  className="tit-proj text-lg font-semibold text-gray-900"
+                >
+                  {currentProject.title}
+                </a>
+              </Tooltip>
+            </div>
             <IconButton
               ariaLabel="like"
               icon={<FaRegHeart />}
@@ -98,7 +114,7 @@ export function CardProject({ projects }: Props) {
             ariaLabel="repeat"
             icon={<PiRepeatOnce />}
             onClick={() => setIsRepeating(!isRepeating)}
-            tooltipContent="Repeat"
+            tooltipContent={t("repeat")}
             className={isRepeating ? "text-gray-900" : "text-gray-500"}
           />
 
@@ -106,25 +122,23 @@ export function CardProject({ projects }: Props) {
             ariaLabel="previous"
             icon={<GiPreviousButton />}
             onClick={previousProject}
-            tooltipContent="Previous"
+            tooltipContent={t("prev")}
             className="text-gray-500 hover:text-gray-900"
           />
 
-          <a href={currentProject.url} target="_blank">
-            <IconButton
-              ariaLabel="play/pause"
-              icon={<FaPause />}
-              onClick={() => {}}
-              tooltipContent="See Project"
-              className="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full"
-            />
-          </a>
+          <IconButton
+            ariaLabel="play/pause"
+            icon={isPaused ? <FaPlay /> : <FaPause />}
+            onClick={toggleProgress}
+            tooltipContent={t("play_pause")}
+            className="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full"
+          />
 
           <IconButton
             ariaLabel="next"
             icon={<GiNextButton />}
             onClick={nextProject}
-            tooltipContent="Next"
+            tooltipContent={t("next")}
             className="text-gray-500 hover:text-gray-900"
           />
 
@@ -132,7 +146,7 @@ export function CardProject({ projects }: Props) {
             ariaLabel="random"
             icon={<LiaRandomSolid />}
             onClick={() => setIsRandom(!isRandom)}
-            tooltipContent="Random"
+            tooltipContent={t("random")}
             className={isRandom ? "text-gray-900" : "text-gray-500"}
           />
         </div>

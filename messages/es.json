@@ -47,23 +47,28 @@
     },
     "ProjectsPage": {
         "title": "Proyectos",
+        "projects": {
+            "front_1": "Plataforma para estudiantes de la UIS, con autenticación y gestión de roles. Permite organizar citas psicológicas de manera eficiente. Desarrollada en Angular con enfoque en seguridad y usabilidad.",
+            "front_2": "Aplicación para buscar películas con detalles como reparto, personajes, resúmenes y trailers. Facilita el acceso rápido a información relevante. Desarrollada para optimizar la experiencia del usuario.",
+            "front_3": "Aplicación en React para buscar y mostrar GIFs, con opciones de búsqueda avanzada. El proyecto está diseñado para ofrecer un despliegue ágil y fluido de imágenes animadas. Totalmente optimizado para UX.",
+            "front_4": "Aplicación móvil que consume servicios para generar rutas y trazar posicionamientos en tiempo real. Ideal para seguimiento y trazabilidad de recorridos, optimizando la eficiencia en tiempo y recursos.",
+            "front_5": "Código fuente de mi portafolio personal, con documentación detallada del desarrollo. Incluye todos los pasos y tecnologías utilizadas para crear el proyecto, mostrando mi experiencia técnica.",
+            "front_6": "Plantilla base para proyectos en React con rutas, validaciones y autenticación preconfiguradas. Ideal para iniciar proyectos rápidamente, con una arquitectura sólida y escalable.",
+            "front_7": "App móvil que permite simular créditos, generar tablas de amortización, agendar notificaciones y convertir tasas de interés. Herramienta integral para la gestión de préstamos y simulaciones financieras.",
+            "back_1": "Backend en NestJs con TypeScript, JWT, autenticación, encriptación de contraseñas, integración con TypeOrm y base de datos MySQL. Ideal para iniciar proyectos con una arquitectura robusta y segura.",
+            "back_2": "Backend desarrollado en NestJs con CRUD para productos, autenticación, integración de TypeOrm, y WebSocket. Proporciona una solución completa para la gestión de tiendas con actualización en tiempo real.",
+            "back_3": "Backend para plataforma de citas psicológicas, desarrollado en NestJs con autenticación, MongoDB, y TypeOrm. Ofrece gestión eficiente de usuarios y seguridad en la comunicación con bases de datos.",
+            "back_4": "Backend hecho en Express y TypeScript, con MongoDB y JWT para un panel administrativo. Proporciona autenticación segura y gestión eficiente de datos para proyectos con panel de control."
+        },
         "inst_prev": "Ver proyecto anterior",
-        "inst_play": "Ver código del proyecto",
+        "inst_play": "Detener proyecto",
         "inst_next": "Ver siguiente proyecto",
         "repeat": "Repetir",
         "prev": "Proyecto anterior",
         "seeProject": "Ver proyecto",
         "next": "Siguiente proyecto",
-        "random": "Proyecto aleatorio",
-        "frontend": {
-            "project1": {
-                "title": "Proyecto 1",
-                "description": "Descripción del proyecto 1",
-                "image": "https://example.com/image1.jpg",
-                "url": "https://example.com/project1",
-                "github": "https://github.com/user/project1"
-            }
-        }
+        "random": "Aleatorio",
+        "play_pause": "Play / Pause"
     },
     "CertificationsPage": {
         "title": "Certificaciones",

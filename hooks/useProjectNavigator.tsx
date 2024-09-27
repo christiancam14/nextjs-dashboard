@@ -1,17 +1,18 @@
 "use client";
 
 import { Project } from "@/interfaces/interfaces";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export function useProjectNavigator(projects: Project[]) {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(1);
   const [progress, setProgress] = useState(0);
-  //   const [counter, setCounter] = useState(0);
   const [isRepeating, setIsRepeating] = useState(false);
   const [isRandom, setIsRandom] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
   const [direction, setDirection] = useState<"left" | "right">("right");
+  const [isPaused, setIsPaused] = useState(false); // Estado para manejar pausa/reanudación
 
+  const intervalRef = useRef<NodeJS.Timeout | null>(null); // useRef para almacenar el intervalo
   const currentProject = projects[currentProjectIndex];
 
   // Reset progress to 0
@@ -60,15 +61,31 @@ export function useProjectNavigator(projects: Project[]) {
     }
   };
 
-  // Effect to handle progress and restart it when the project changes
-  useEffect(() => {
-    resetProgress(); // Reset progress when project changes
-    const interval = setInterval(() => {
-      return setProgress((prev) => (prev < 100 ? prev + progressIncrement : 0));
-    }, 1000);
+  // Función para pausar el progreso
+  const toggleProgress = () => {
+    setIsPaused((prev) => !prev); // Cambia el estado de pausa
+  };
 
-    return () => clearInterval(interval); // Clean up the interval on unmount
-  }, [currentProjectIndex, progressIncrement]);
+  // Manejo de progreso usando useEffect
+  useEffect(() => {
+    if (!isPaused) {
+      // Si no está en pausa, crea el intervalo
+      intervalRef.current = setInterval(() => {
+        setProgress((prev) => (prev < 100 ? prev + progressIncrement : 0));
+      }, 1000);
+    } else if (intervalRef.current) {
+      // Si está en pausa, limpiar el intervalo
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+
+    return () => {
+      // Limpiar el intervalo al desmontar
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [isPaused, progressIncrement, currentProjectIndex]);
 
   const toggleLike = () => {
     setIsLiked((prev) => !prev);
@@ -89,6 +106,7 @@ export function useProjectNavigator(projects: Project[]) {
     isRandom,
     isLiked,
     direction,
+    isPaused, // Retornar el estado de pausa
     nextProject,
     previousProject,
     setIsRepeating,
@@ -96,5 +114,6 @@ export function useProjectNavigator(projects: Project[]) {
     toggleLike,
     toggleRepeat,
     toggleRandom,
+    toggleProgress, // Retornar la función de pausa/reanudación
   };
 }
