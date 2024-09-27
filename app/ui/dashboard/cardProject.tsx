@@ -29,12 +29,12 @@ export function CardProject({ projects }: Props) {
     isRandom,
     isLiked,
     direction,
+    isPaused,
     nextProject,
     previousProject,
     setIsRepeating,
     setIsRandom,
     toggleLike,
-    isPaused,
     toggleProgress,
   } = useProjectNavigator(projects);
 

@@ -27,7 +27,7 @@ export default function BtnInstruction() {
             ariaLabel="play/pause"
             icon={<FaPause />}
             onClick={() => {}}
-            tooltipContent="See Project"
+            tooltipContent="Play / Pause"
             className="bg-sky-100 text-gray-900 p-3 rounded-full md:mb-2"
           />
           <p className="text-sm self-center">{t("inst_play")}</p>

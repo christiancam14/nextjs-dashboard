@@ -101,7 +101,7 @@ div:has(.icon-span:hover) .icon-span:not(:hover) .icon-stack {
 }
 
 .cont-card-project:has(.card-project:hover) .card-project:not(:hover) {
-  background-color: rgb(64, 74, 88);
+  background-color: rgb(159, 171, 189);
   scale: 0.96;
 }
 
@@ -292,8 +292,10 @@ body {
 }
 
 .cont-img-project {
-  /* background: rgb(93, 88, 153); */
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
+  /* 
+  */
+  background: #030711;
+  box-shadow: inset rgb(245 245 255 / 40%) 0px 0px 14px 4px,
     rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
 }
 

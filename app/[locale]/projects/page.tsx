@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import { CardProject } from "@/app/ui/dashboard/cardProject";
 import Reveal from "@/app/ui/dashboard/reveal";
 import { useTranslations } from "next-intl";
 import { Project } from "@/interfaces/interfaces";
 import BtnInstruction from "@/app/ui/dashboard/projectInstruction";
+import { CardProject } from '@/app/ui/dashboard/cardProject';
 
 export const metadata: Metadata = {
   title: "Projects",
