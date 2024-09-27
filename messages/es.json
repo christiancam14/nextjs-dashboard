@@ -47,6 +47,9 @@
     },
     "ProjectsPage": {
         "title": "Proyectos",
+        "inst_prev": "Ver proyecto anterior",
+        "inst_play": "Ver código del proyecto",
+        "inst_next": "Ver siguiente proyecto",
         "repeat": "Repetir",
         "prev": "Proyecto anterior",
         "seeProject": "Ver proyecto",
