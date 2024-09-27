@@ -35,6 +35,10 @@ export function CardProject({ projects }: Props) {
   const currentProject = projects[currentProjectIndex];
   const currentAdvance = (progress * currentProject.time2) / 100;
 
+  if (currentAdvance >= currentProject.time2) {
+    nextProject();
+  }
+
   return (
     <div className="card-project max-w-sm w-80 bg-sky-100 rounded-lg shadow-md overflow-hidden p-3">
       <motion.div
