@@ -53,13 +53,15 @@ export default function HomePage() {
           </div>
           <div className="col mx-auto self-center mb-4 md:mb-0 md:min-w-80 md:flex md:justify-center">
             <Reveal>
-              <Image
-                src="/avatar.png"
-                alt="Profile pick"
-                width={150}
-                height={150}
-                className="rounded-full"
-              />
+              <figure>
+                <Image
+                  src="/avatar.webp"
+                  alt="Profile pick"
+                  width={220}
+                  height={220}
+                  className="rounded-full"
+                />
+              </figure>
             </Reveal>
           </div>
         </div>

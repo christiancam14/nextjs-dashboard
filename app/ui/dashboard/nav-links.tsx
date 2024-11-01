@@ -25,7 +25,7 @@ export default function NavLinks() {
             <Link
               href={link.href}
               className={clsx(
-                "text-sky-100 flex h-[48px] m-0 grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium hover:bg-sky-100 hover:text-slate-950 hover:font-extrabold	 md:flex-none md:justify-start md:p-2 md:px-3",
+                "nav-link-hover text-sky-100 border-transparent border-2 flex h-[48px] m-0 grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium hover:bg-sky-100 hover:text-slate-950 md:flex-none md:justify-start md:p-2 md:px-3",
                 {
                   "font-extrabold	underline ": pathname === link.href,
                 }

@@ -462,6 +462,14 @@ body {
   background-color: #030712 !important;
 }
 
+.nav-link-hover {
+  text-shadow: 0.5px 0 0 #030711;
+}
+
+.nav-link-hover:hover {
+  text-shadow: 1px 0 0 #030711;
+}
+
 /* ================ Timeline Media Queries ================ */
 
 @media screen and (max-width: 768px) {

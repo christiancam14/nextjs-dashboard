@@ -15,14 +15,16 @@ export default function Header() {
           <span className="block opacity-0 md:hidden">
             <LanguageSwitcher />
           </span>
-          <Reveal>
-            <Link
-              className={`${principalFont.className} flex items-end justify-start	text-sky-100 md:p-1 text-2xl sm:text-xl  lg:text-2xl`}
-              href="/"
-            >
-              &lt;{t("portfolio")} / &gt;
-            </Link>
-          </Reveal>
+          <span className="min-w-44 sm:min-w-36 lg:min-w-44">
+            <Reveal>
+              <Link
+                className={`${principalFont.className} flex items-end justify-start	text-sky-100 md:p-1 text-2xl sm:text-xl  lg:text-2xl`}
+                href="/"
+              >
+                &lt;{t("portfolio")} / &gt;
+              </Link>
+            </Reveal>
+          </span>
           <span className="self-center">
             <LanguageSwitcher />
           </span>
