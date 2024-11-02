@@ -28,23 +28,25 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <Switch
-      size="lg"
-      isSelected={isEnglish}
-      startContent={<IoLanguage className="text-gray-800" />}
-      endContent={<IoLanguage className="text-gray-800" />}
-      className={clsx({
-        "en-switch": isEnglish,
-        "es-switch": !isEnglish,
-      })}
-      onValueChange={toggleLanguage}
-      thumbIcon={({ isSelected, className }) =>
-        isSelected ? (
-          <span className={className}>En</span>
-        ) : (
-          <span className={className}>Es</span>
-        )
-      }
-    />
+    <button className="hover-cursor bg-transparent">
+      <Switch
+        size="lg"
+        isSelected={isEnglish}
+        startContent={<IoLanguage className="text-gray-800" />}
+        endContent={<IoLanguage className="text-gray-800" />}
+        className={clsx({
+          "en-switch": isEnglish,
+          "es-switch": !isEnglish,
+        })}
+        onValueChange={toggleLanguage}
+        thumbIcon={({ isSelected, className }) =>
+          isSelected ? (
+            <span className={className}>En</span>
+          ) : (
+            <span className={className}>Es</span>
+          )
+        }
+      />
+    </button>
   );
 }

@@ -5,5 +5,5 @@ export interface Project {
   description: string;
   url: string;
   stack: string;
-  time2: number;
+  time: number;
 }

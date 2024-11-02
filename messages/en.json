@@ -9,13 +9,13 @@
     },
     "HomePage": {
         "frontend": "Frontend developer",
-        "yearsExperience": "4 Years of Experience",
+        "yearsExperience": "{years} Years of Experience",
         "description": "Passionate about creating engaging user interfaces and transform ideas into responsive, high-performance websites.",
         "contact": "Contact"
     },
     "AboutPage": {
         "title": "About me",
-        "description": "With 4 years of expertise in frontend development and UI/UX design, I specialize in building seamless user experiences. Proficient in Angular, I develop dynamic interfaces, integrate microservices, and implement secure authentication. I've developed custom WordPress plugins using PHP and JavaScript, and built scalable RESTful APIs with NestJs and TypeOrm. Experienced in Git for version control on GitHub and GitLab, I excel in Scrum environments, demonstrating leadership, teamwork, and project management skills.",
+        "description": "With {years} years of expertise in frontend development and UI/UX design, I specialize in building seamless user experiences. Proficient in Angular, I develop dynamic interfaces, integrate microservices, and implement secure authentication. I've developed custom WordPress plugins using PHP and JavaScript, and built scalable RESTful APIs with NestJs and TypeOrm. Experienced in Git for version control on GitHub and GitLab, I excel in Scrum environments, demonstrating leadership, teamwork, and project management skills.",
         "contact": "Contact"
     },
     "Timeline": {

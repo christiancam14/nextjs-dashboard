@@ -8,9 +8,11 @@ import { inter } from "@/app//ui/fonts";
 import Reveal from "@/app/ui/dashboard/reveal";
 import { useTranslations } from "next-intl";
 import BtnCurriculum from "@/app/ui/dashboard/btnCurriculum";
+import { calculateExperienceYears } from "@/helpers/calculateExperienceYears";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
+  const yearsOfExperience = calculateExperienceYears();
 
   return (
     <section className="w-screen pt-20 md:pt-32">
@@ -29,7 +31,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal>
               <p className="text-lg max-w-96 mx-auto md:mr-0 md:ml-auto">
-                {t("yearsExperience")}
+                {t("yearsExperience", { years: yearsOfExperience })}
               </p>
             </Reveal>
             <Reveal>

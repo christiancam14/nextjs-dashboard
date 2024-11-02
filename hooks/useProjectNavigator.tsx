@@ -3,6 +3,24 @@
 import { Project } from "@/interfaces/interfaces";
 import { useState, useEffect, useRef } from "react";
 
+export interface ProjectNavigator {
+  currentProjectIndex: number;
+  progress: number;
+  isRepeating: boolean;
+  isRandom: boolean;
+  isLiked: boolean;
+  direction: "left" | "right";
+  isPaused: boolean;
+  nextProject: () => void;
+  previousProject: () => void;
+  setIsRepeating: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsRandom: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleLike: () => void;
+  toggleRepeat: () => void;
+  toggleRandom: () => void;
+  toggleProgress: () => void;
+}
+
 export function useProjectNavigator(projects: Project[]) {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(1);
   const [progress, setProgress] = useState(0);
@@ -18,8 +36,8 @@ export function useProjectNavigator(projects: Project[]) {
   // Reset progress to 0
   const resetProgress = () => setProgress(0);
 
-  // Calculate increment step for progress based on project time2
-  const progressIncrement = 100 / (currentProject?.time2 || 100); // Asume un valor por defecto en caso de que `time2` no esté definido
+  // Calculate increment step for progress based on project time
+  const progressIncrement = 100 / (currentProject?.time || 100); // Asume un valor por defecto en caso de que `time` no esté definido
 
   const getRandomProjectIndex = () => {
     let randomIndex = Math.floor(Math.random() * projects.length);

@@ -3,6 +3,7 @@ import Reveal from "@/app//ui/dashboard/reveal";
 import TimeLine from "@/app//ui/dashboard/timeLine";
 import { principalFont } from "@/app//ui/fonts";
 import { useTranslations } from "next-intl";
+import { calculateExperienceYears } from "@/helpers/calculateExperienceYears";
 
 export const metadata: Metadata = {
   title: "About",
@@ -11,6 +12,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const t = useTranslations("AboutPage");
 
+  const yearsOfExperience = calculateExperienceYears();
+  
   return (
     <section className="w-screen ">
       <div className="flex flex-col items-center max-w-screen-xl mx-auto px-6 md:px-12">
@@ -23,7 +26,7 @@ export default function AboutPage() {
         </Reveal>
         <Reveal>
           <p className={`${principalFont.className} text-center text-sky-100`}>
-            {t("description")}
+            {t("description", { years: yearsOfExperience })}
           </p>
         </Reveal>
         <div className="my-12 w-full">

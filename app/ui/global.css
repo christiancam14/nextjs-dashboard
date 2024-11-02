@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  cursor: url("../../public/cursor-green.png"), auto;
+}
+
+* button,
+* button *,
+* a,
+* a *,
+* .hover-cursor * {
+  cursor: url("../../public/click-cursor.png"), auto;
+}
+
+* h1,
+* h2,
+* h3,
+* h4,
+* h5,
+* h6,
+* p {
+  cursor: text;
+}
+
+.background-gif {
+  background-image: url("../../public/bg-video.gif");
+  background-size: cover; /* Para cubrir todo el contenedor */
+  background-position: center; /* Centra el fondo */
+  height: 200px; /* Altura del contenedor */
+  width: 128px; /* Ancho del contenedor */
+}
+
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
@@ -292,8 +322,6 @@ body {
 }
 
 .cont-img-project {
-  /* 
-  */
   background: #030711;
   box-shadow: inset rgb(245 245 255 / 40%) 0px 0px 14px 4px,
     rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
@@ -468,6 +496,19 @@ body {
 
 .nav-link-hover:hover {
   text-shadow: 1px 0 0 #030711;
+}
+
+/* App.css */
+.cursor {
+  position: fixed; /* Fijo para que siga al cursor */
+  width: 32px; /* Tamaño inicial */
+  height: 32px; /* Tamaño inicial */
+  border-radius: 50%; /* Forma circular */
+  background-color: red; /* Fondo transparente inicialmente */
+  pointer-events: none; /* Para que no interfiera con el clic */
+  transition: background-color 0.2s, width 0.2s, height 0.2s; /* Transiciones suaves */
+  z-index: 9999; /* Asegúrate de que esté por encima de otros elementos */
+  will-change: transform, background-color;
 }
 
 /* ================ Timeline Media Queries ================ */

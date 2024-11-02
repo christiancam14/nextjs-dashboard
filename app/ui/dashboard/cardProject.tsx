@@ -1,19 +1,15 @@
 "use client";
 
-import React from "react";
-import { FaPause, FaPlay, FaRegHeart } from "react-icons/fa";
-import { LiaRandomSolid } from "react-icons/lia";
-import { PiRepeatOnce } from "react-icons/pi";
-import { GiNextButton, GiPreviousButton } from "react-icons/gi";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Project } from "@/interfaces/interfaces";
-import { IconButton } from "./iconButton";
-import { ProgressBarLine } from "./progressBarLine";
-import { useProjectNavigator } from "@/hooks/useProjectNavigator";
-import Reveal from "./reveal";
+import {
+  ProjectNavigator,
+  useProjectNavigator,
+} from "@/hooks/useProjectNavigator";
 import { ProjectText } from "./projectText";
-import { Tooltip } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
+import { CardDescription } from "./cardDescription";
 
 interface Props {
   projects: Project[];
@@ -22,135 +18,83 @@ interface Props {
 export function CardProject({ projects }: Props) {
   const t = useTranslations("ProjectsPage");
 
-  const {
-    currentProjectIndex,
-    progress,
-    isRepeating,
-    isRandom,
-    isLiked,
-    direction,
-    isPaused,
-    nextProject,
-    previousProject,
-    setIsRepeating,
-    setIsRandom,
-    toggleLike,
-    toggleProgress,
-  } = useProjectNavigator(projects);
+  const [isHover, setIsHover] = useState(false);
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const cardRef = useRef<HTMLDivElement | null>(null); // Create a ref for the card
+
+  const projectNavigator: ProjectNavigator = useProjectNavigator(projects);
+
+  const { currentProjectIndex, progress, direction, isPaused, nextProject } =
+    projectNavigator;
 
   const currentProject = projects[currentProjectIndex];
-  const currentAdvance = (progress * currentProject.time2) / 100;
+  const currentAdvance = (progress * currentProject.time) / 100;
 
-  if (currentAdvance >= currentProject.time2) {
+  if (currentAdvance >= currentProject.time) {
     nextProject();
   }
 
-  return (
-    <div className="card-project max-w-sm w-80 bg-sky-100 rounded-lg shadow-md overflow-hidden p-3">
-      <motion.div
-        key={currentProject.id}
-        initial={{ opacity: 0, x: direction === "right" ? "100%" : "-100%" }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: direction === "right" ? "-100%" : "100%" }}
-        transition={{ duration: 0.5 }}
-        className="img-card-project"
-      >
-        <div
-          style={{ width: 300, height: 300, overflow: "hidden" }}
-          className="cont-img-project bg-gray-600 rounded-lg aspect-square flex justify-center align-middle items-center"
-        >
-          <ProjectText
-            text={t(`projects.${currentProject.description}`)}
-            isPaused={isPaused}
-          />
-        </div>
-      </motion.div>
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (cardRef.current) {
+      const rect = cardRef.current.getBoundingClientRect(); // Get the card's position and size
+      const x = e.clientX - rect.left + 50; // Calculate x relative to the card
+      const y = e.clientY - rect.top + 20; // Calculate y relative to the card
+      setCursorPos({ x, y });
+    }
+  };
 
-      <div className="py-4">
-        <div className="flex flex-col items-center justify-between">
-          <div className="flex justify-between w-full">
-            <div className="relative">
-              <Tooltip content={t("seeProject")}>
-                <a
-                  href={currentProject.url}
-                  target="_blank"
-                  className="tit-proj text-lg font-semibold text-gray-900"
-                >
-                  {currentProject.title}
-                </a>
-              </Tooltip>
-            </div>
-            <IconButton
-              ariaLabel="like"
-              icon={<FaRegHeart />}
-              onClick={toggleLike}
-              tooltipContent="Like"
-              className={`text-gray-500 hover:text-red-500 ${
-                isLiked ? "text-red-500" : ""
-              }`}
+  return (
+    <div className="relative">
+      <motion.div
+        ref={cardRef} // Attach the ref to the card
+        onMouseMove={handleMouseMove}
+        onHoverStart={() => setIsHover(true)}
+        onHoverEnd={() => setIsHover(false)}
+        className="card-project max-w-sm w-80 bg-sky-100 rounded-lg shadow-md overflow-hidden p-3"
+        style={{
+          position: "relative",
+          transition: "transform 0.1s", // Smooth movement
+        }}
+      >
+        <motion.div
+          key={currentProject.id}
+          initial={{ opacity: 0, x: direction === "right" ? "100%" : "-100%" }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: direction === "right" ? "-100%" : "100%" }}
+          transition={{ duration: 0.5 }}
+          className="img-card-project"
+        >
+          <div
+            style={{ width: 300, height: 300, overflow: "hidden" }}
+            className="cont-img-project bg-gray-600 rounded-lg aspect-square flex justify-center align-middle items-center"
+          >
+            <ProjectText
+              text={t(`projects.${currentProject.description}`)}
+              isPaused={isPaused}
             />
           </div>
-          <div className="ellipsis-cont w-full text-start">
-            <Reveal>
-              <span className="ellipsis text-sm text-gray-600">
-                {currentProject.stack}
-              </span>
-            </Reveal>
-          </div>
+        </motion.div>
+
+        <CardDescription
+          projectNavigator={projectNavigator}
+          project={currentProject}
+          currentAdvance={currentAdvance}
+        />
+      </motion.div>
+
+      {/* Floating div for description */}
+      {(isHover && false) && (
+        <div
+          className="background-gif absolute border rounded shadow-lg p-4"
+          style={{
+            top: cursorPos.y + 10, // Adjust position as desired
+            left: cursorPos.x + 10,
+            zIndex: 1000,
+          }}
+        >
+          <h3 className="text-lg font-semibold">{currentProject.title}</h3>
         </div>
-
-        <ProgressBarLine progress={progress} />
-
-        <div className="flex justify-between text-xs text-gray-600 mt-1">
-          <span>
-            0:0
-            {String(Math.trunc(currentAdvance))}
-          </span>
-          <span>0:0{currentProject.time2}</span>
-        </div>
-
-        <div className="flex items-center justify-between mt-4 px-4">
-          <IconButton
-            ariaLabel="repeat"
-            icon={<PiRepeatOnce />}
-            onClick={() => setIsRepeating(!isRepeating)}
-            tooltipContent={t("repeat")}
-            className={isRepeating ? "text-gray-900" : "text-gray-500"}
-          />
-
-          <IconButton
-            ariaLabel="previous"
-            icon={<GiPreviousButton />}
-            onClick={previousProject}
-            tooltipContent={t("prev")}
-            className="text-gray-500 hover:text-gray-900"
-          />
-
-          <IconButton
-            ariaLabel="play/pause"
-            icon={isPaused ? <FaPlay /> : <FaPause />}
-            onClick={toggleProgress}
-            tooltipContent={t("play_pause")}
-            className="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full"
-          />
-
-          <IconButton
-            ariaLabel="next"
-            icon={<GiNextButton />}
-            onClick={nextProject}
-            tooltipContent={t("next")}
-            className="text-gray-500 hover:text-gray-900"
-          />
-
-          <IconButton
-            ariaLabel="random"
-            icon={<LiaRandomSolid />}
-            onClick={() => setIsRandom(!isRandom)}
-            tooltipContent={t("random")}
-            className={isRandom ? "text-gray-900" : "text-gray-500"}
-          />
-        </div>
-      </div>
+      )}
     </div>
   );
 }
