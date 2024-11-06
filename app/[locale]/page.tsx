@@ -3,6 +3,7 @@ import SkillsPage from "./skills/page";
 import ProjectsPage from "./projects/page";
 import HomePage from "./home/page";
 import CertificationsPage from "./certifications/page";
+import ExperiencePage from "./experience/page";
 
 export default function Page() {
   return (
@@ -15,6 +16,9 @@ export default function Page() {
       </div>
       <div id="SkillsPage" className="pt-24">
         <SkillsPage />
+      </div>
+      <div id="SkillsPage" className="pt-24">
+        <ExperiencePage />
       </div>
       <div id="ProjectsPage" className="pt-24">
         <ProjectsPage />

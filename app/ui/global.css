@@ -6,8 +6,13 @@
   cursor: url("../../public/cursor-green.png"), auto;
 }
 
+* .normal-cursor button:hover,
+* button.normal-cursor {
+  cursor: url("../../public/cursor-green.png"), auto;
+}
+
 * button,
-* button *,
+* button:not(.normal-cursor) *,
 * a,
 * a *,
 * .hover-cursor * {

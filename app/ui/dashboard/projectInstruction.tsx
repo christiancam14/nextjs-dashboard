@@ -17,7 +17,7 @@ export default function BtnInstruction() {
             icon={<GiPreviousButton />}
             onClick={() => {}}
             tooltipContent="Previous"
-            className="bg-sky-100 text-gray-900 p-3 rounded-full md:mb-2"
+            className="normal-cursor bg-sky-100 text-gray-900 p-3 rounded-full md:mb-2"
           />
           <p className="text-sm self-center">{t("inst_prev")}</p>
         </div>
@@ -28,7 +28,7 @@ export default function BtnInstruction() {
             icon={<FaPause />}
             onClick={() => {}}
             tooltipContent="Play / Pause"
-            className="bg-sky-100 text-gray-900 p-3 rounded-full md:mb-2"
+            className="normal-cursor bg-sky-100 text-gray-900 p-3 rounded-full md:mb-2"
           />
           <p className="text-sm self-center">{t("inst_play")}</p>
         </div>
@@ -39,7 +39,7 @@ export default function BtnInstruction() {
             icon={<GiNextButton />}
             onClick={() => {}}
             tooltipContent="Next"
-            className="bg-sky-100 text-gray-900 p-3 rounded-full md:mb-2"
+            className="normal-cursor bg-sky-100 text-gray-900 p-3 rounded-full md:mb-2"
           />
           <p className="text-sm self-center">{t("inst_next")}</p>
         </div>

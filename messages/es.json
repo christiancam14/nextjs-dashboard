@@ -8,14 +8,14 @@
         "contact": "Contacto"
     },
     "HomePage": {
-        "frontend": "Desarrollador frontend",
+        "frontend": "Desarrollador Fullstack",
         "yearsExperience": "{years} años de experiencia",
-        "description": "Apasionado por crear interfaces de usuario atractivas y transformar ideas en sitios web responsivos y de alto rendimiento.",
+        "description": "Experto en interfaces de usuario y diseño responsivo de alto rendimiento, transformando ideas en experiencias digitales atractivas.",
         "contact": "Contacto"
     },
     "AboutPage": {
         "title": "Sobre mí",
-        "description": "Con {years} años de experiencia en desarrollo frontend y diseño UI/UX, me especializo en crear experiencias de usuario fluidas. Soy competente en Angular, desarrollo interfaces dinámicas, integro microservicios y implemento autenticación segura. He desarrollado plugins personalizados de WordPress usando PHP y JavaScript, y construí APIs RESTful escalables con NestJs y TypeOrm. Con experiencia en Git para control de versiones en GitHub y GitLab, sobresalgo en entornos Scrum, demostrando habilidades de liderazgo, trabajo en equipo y gestión de proyectos.",
+        "description": "Desarrollador especializado en frontend y diseño UI/UX, con un enfoque en la creación de experiencias de usuario fluidas y atractivas. Domino Angular y React para el desarrollo de interfaces dinámicas, integraciones con microservicios y autenticación segura. También tengo experiencia en el desarrollo de plugins personalizados en WordPress usando PHP y JavaScript. En el backend, he construido APIs RESTful escalables utilizando NestJs y Express. Mis habilidades en control de versiones con Git (GitHub y GitLab) y mi participación en entornos Scrum me han permitido destacar en proyectos colaborativos, donde aporto tanto liderazgo como una fuerte capacidad de gestión.",
         "contact": "Contacto"
     },
     "Timeline": {
@@ -47,6 +47,8 @@
     },
     "ProjectsPage": {
         "title": "Proyectos",
+        "see_code": "Ver código del proyecto:",
+        "see_code_description": "Haz clic en el nombre del proyecto para acceder al repositorio.",
         "projects": {
             "front_1": "Plataforma para estudiantes de la UIS, con autenticación y gestión de roles. Permite organizar citas psicológicas de manera eficiente. Desarrollada en Angular con enfoque en seguridad y usabilidad.",
             "front_2": "Aplicación para buscar películas con detalles como reparto, personajes, resúmenes y trailers. Facilita el acceso rápido a información relevante. Desarrollada para optimizar la experiencia del usuario.",

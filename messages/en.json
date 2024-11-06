@@ -8,14 +8,14 @@
         "contact": "Contact"
     },
     "HomePage": {
-        "frontend": "Frontend developer",
+        "frontend": "Fullstack developer",
         "yearsExperience": "{years} Years of Experience",
-        "description": "Passionate about creating engaging user interfaces and transform ideas into responsive, high-performance websites.",
+        "description": "Expert in high-performance user interfaces and responsive design, transforming ideas into engaging digital experiences.",
         "contact": "Contact"
     },
     "AboutPage": {
         "title": "About me",
-        "description": "With {years} years of expertise in frontend development and UI/UX design, I specialize in building seamless user experiences. Proficient in Angular, I develop dynamic interfaces, integrate microservices, and implement secure authentication. I've developed custom WordPress plugins using PHP and JavaScript, and built scalable RESTful APIs with NestJs and TypeOrm. Experienced in Git for version control on GitHub and GitLab, I excel in Scrum environments, demonstrating leadership, teamwork, and project management skills.",
+        "description": "Frontend and UI/UX developer, with a focus on creating fluid and engaging user experiences. I am proficient in Angular and React for developing dynamic interfaces, microservices integrations, and secure authentication. I also have experience developing custom plugins in WordPress using PHP and JavaScript. On the backend, I have built scalable RESTful APIs using NestJs and Express. My skills in version control with Git (GitHub and GitLab) and my participation in Scrum environments have allowed me to excel in collaborative projects, where I provide both leadership and strong management skills.",
         "contact": "Contact"
     },
     "Timeline": {
@@ -47,6 +47,8 @@
     },
     "ProjectsPage": {
         "title": "Projects",
+        "see_code": "View project code:",
+        "see_code_description": "Click on the project name to access the repository.",
         "projects": {
             "front_1": "Platform for UIS students with authentication and role management. Efficiently organizes psychological appointments. Developed in Angular with a focus on security and usability.",
             "front_2": "App to search for movies, providing details like cast, characters, summaries, and trailers. Enhances user experience with quick access to relevant information.",

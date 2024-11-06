@@ -3,7 +3,7 @@ import Reveal from "@/app/ui/dashboard/reveal";
 import { useTranslations } from "next-intl";
 import { Project } from "@/interfaces/interfaces";
 import BtnInstruction from "@/app/ui/dashboard/projectInstruction";
-import { CardProject } from '@/app/ui/dashboard/cardProject';
+import { CardProject } from "@/app/ui/dashboard/cardProject";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -123,6 +123,9 @@ export default function ProjectsPage() {
         <Reveal>
           <h3 className="text-2xl">{t("title")}</h3>
         </Reveal>
+        <p>
+          <strong>{t("see_code")}</strong> {t("see_code_description")}
+        </p>
         <BtnInstruction />
         <div className="cont-card-project flex flex-wrap gap-8">
           <div className="flex-1 flex flex-col items-center gap-4">
