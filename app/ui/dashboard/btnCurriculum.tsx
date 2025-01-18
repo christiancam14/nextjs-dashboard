@@ -20,8 +20,8 @@ export default function BtnCurriculum() {
     <a
       href={`${baseUrl}${
         isEnglish
-          ? "EN_CV_ChristianCamachoGalvis.pdf"
-          : "ES_CV_ChristianCamachoGalvis.pdf"
+          ? "EN_CV_ChristianCamachoGalvis_2025.pdf"
+          : "ES_CV_ChristianCamachoGalvis_2025.pdf"
       }`}
       className="w-fit mx-auto md:mx-0"
       download
