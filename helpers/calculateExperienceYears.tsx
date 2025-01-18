@@ -1,5 +1,5 @@
 export const calculateExperienceYears = () => {
-  const startDate = new Date("2020-05-01");
+  const startDate = new Date("2021-05-01");
   const currentDate = new Date();
   const yearsDifference = currentDate.getFullYear() - startDate.getFullYear();
   const isBeforeAnniversary =
